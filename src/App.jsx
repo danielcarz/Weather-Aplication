@@ -1,4 +1,8 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom';
+
+//routes
+import { AppRoutes } from './Routes/AppRoutes';
 
 //styles
 import './Sass/App.scss';
@@ -8,9 +12,11 @@ function App() {
  
 
   return (
-    <div className='config' >
-      <h1 className='tittle' >basic config</h1>
-    </div>
+    <BrowserRouter>
+
+      <AppRoutes></AppRoutes>
+      
+    </BrowserRouter>
   )
 }
 
