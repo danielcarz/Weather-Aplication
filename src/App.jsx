@@ -1,14 +1,16 @@
 import React from 'react'
 
+//styles
+import './Sass/App.scss';
 
 
 function App() {
  
 
   return (
-    <>
-      <h1> basic config </h1>
-    </>
+    <div className='config' >
+      <h1 className='tittle' >basic config</h1>
+    </div>
   )
 }
 
