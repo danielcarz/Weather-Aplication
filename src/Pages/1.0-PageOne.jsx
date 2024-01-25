@@ -1,9 +1,14 @@
 import React from "react";
 
+//styles
+import '../Sass/App.scss';
+
 export const PageOne = () => {
 
     return(
 
-        <h1>PageOne</h1>
+        <div className="Pageone" >
+            <h1>Page one</h1>
+        </div>
     )
 }

@@ -1,0 +1,31 @@
+//@use '../Variables.scss' as * ;
+
+/* 
+SECTION TO DEFINE THE WIDTH OF THE SCREEN:
+  $ancho-telefono: 480px;
+  $ancho-tablet: 820px;
+  $ancho-computadora: 1024px; 
+
+*/
+
+@mixin media-query($tamaño-pantalla) {
+    // Define los tamaños de pantalla para teléfonos, tablets y computadoras
+    
+  
+    // Comprueba el tamaño de pantalla proporcionado y genera las Media Queries
+    @if $tamaño-pantalla == $media_phone {
+      @media screen and (max-width: #{$ancho-telefono}) {
+        @content; 
+      }
+    } @else if $tamaño-pantalla == $media_tablet {
+      @media screen and (min-width: #{$ancho-telefono + 1}) and (max-width: #{$ancho-tablet}) {
+        @content;
+      }
+    } @else if $tamaño-pantalla == $media_desktop{
+      @media screen and (min-width: #{$ancho-tablet + 1}) {
+        @content;
+      }
+    } @else {
+      @warn "Tamaño de pantalla no válido. Utiliza 'telefono', 'tablet' o 'computadora'.";
+    }
+  }
