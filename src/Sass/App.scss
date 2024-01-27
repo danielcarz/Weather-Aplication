@@ -1,6 +1,8 @@
 //VARIABLES (it musb be in the first position)
 @use './Mixins/Variables.scss' as *;
 
+@import 'bootstrap/scss/bootstrap';
+
 //MEDIA
 @import './Mixins/MediaQueries/MediaQueries.scss';
 
