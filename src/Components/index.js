@@ -1,4 +1,4 @@
 //components
-export * from './Navbar.jsx';
+export * from './1.0-Navbar.jsx';
 
-export * from './ComponentOne.jsx'; 
+export * from './2.0-ComponentOne.jsx'; 
