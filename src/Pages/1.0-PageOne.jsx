@@ -1,7 +1,7 @@
 import React from "react";
 
 //components
-import { NavbarComponent, ComponentOne } from "../Components"; 
+import { NavbarComponent, ComponentOne, Testing } from "../Components"; 
 
 //styles
 import '../Sass/App.scss';
@@ -13,6 +13,9 @@ export const PageOne = () => {
           <NavbarComponent></NavbarComponent>
 
           <ComponentOne></ComponentOne>
+
+          <Testing></Testing>
+          
         </>
       );
 }
