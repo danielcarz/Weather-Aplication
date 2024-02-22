@@ -8,35 +8,47 @@ import { useEffect, useState } from 'react'
 //context
 import { Contex } from './CreateContext';
 
-//custom hooks
-import { fetchApi } from '../CustomHooks/FetchApi';
+//custom hooks 
+import { fetchApi, handleForms } from '../CustomHooks/index';
 
 
 
 
-export const ContexProvider = ( { children } ) => {
+export const ContexProvider = ( { children } ) => { 
+
+//FORMS
+    const { inputValue, pais, handleInputChange, handleSubmit, dependecy, setDependency } = handleForms( );
 
 //FETCH
 
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
+   
 
     useEffect( ( ) => {
 
-        fetchApi()
+        fetchApi( pais )
             .then( data => {
 
                 setWeatherArrayInfo( [ data ] );
             });
-    }, []);
+        
+        
+
+    }, [ dependecy ]); 
    
 
   
     return(  
         <Contex.Provider value = { 
+ 
+            {  
+               //fetch
+                weatherArrayInfo,
 
-            { 
-               
-                weatherArrayInfo
+                //forms
+                inputValue,
+                handleInputChange,
+                handleSubmit
                  
             }
             

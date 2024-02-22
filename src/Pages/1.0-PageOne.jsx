@@ -1,7 +1,7 @@
 import React from "react";
 
 //components
-import { NavbarComponent, ComponentOne, Testing } from "../Components"; 
+import { NavbarComponent, ComponentOne, WeatherCard} from "../Components";  
 
 //styles
 import '../Sass/App.scss';
@@ -14,8 +14,10 @@ export const PageOne = () => {
 
           <ComponentOne></ComponentOne>
 
-          <Testing></Testing>
-          
+          <WeatherCard></WeatherCard>
+
+         
+           
         </>
       );
 }
