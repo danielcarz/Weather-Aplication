@@ -22,7 +22,7 @@ export const CurrentWeather = () => {
 
             <section className="currentWeatherInfo">
                 <h3>Weather state info</h3>
-                <h3> 23º C </h3>
+                <h3> { weatherArrayInfo.temperature } </h3>
             </section>
 
             <section className="currentWeatherfeatures">

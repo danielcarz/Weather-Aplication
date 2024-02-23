@@ -17,8 +17,9 @@ import { fetchApi, handleForms } from '../CustomHooks/index';
 export const ContexProvider = ( { children } ) => { 
 
 //FORMS
-    const { inputValue, pais, handleInputChange, handleSubmit, dependecy: isNewValue, setIsNewValue } = handleForms( );
+    const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = handleForms( );
 
+    console.log( isNewValue );
 //WEATHER ARRAY INFO
   
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
@@ -35,7 +36,7 @@ export const ContexProvider = ( { children } ) => {
                
 
                 const [ { cod, city, list } ] = [ data ];
-                //console.log( data );
+                console.log( data );
 
                 //extracting weather info
                 const { id, name } = city; 
@@ -45,10 +46,10 @@ export const ContexProvider = ( { children } ) => {
                 const { speed } = wind;
                                  
                 const { temp, humidity } = main;
-
+ 
               
   
-                setWeatherArrayInfo ( [ { id: id, code: cod, nameCity: name, date: dt_txt, temperature: temp, humi: humidity, speedWint: speed} ] );
+                setWeatherArrayInfo (  { id: id, code: cod, nameCity: name, date: dt_txt, temperature: temp, humi: humidity, speedWint: speed}  );
                 
 
             });
