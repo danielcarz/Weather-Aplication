@@ -19,19 +19,45 @@ export const ContexProvider = ( { children } ) => {
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, dependecy, setDependency } = handleForms( );
 
+//WEATHER ARRAY INFO
+
+    
+    const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
+    //console.log( 'iinfo', weatherArrayInfo );
+
 //FETCH
 
-    const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
    
 
     useEffect( ( ) => {
 
         fetchApi( pais )
+        
             .then( data => {
 
                 setWeatherArrayInfo( [ data ] );
+
+                const [ { cod, city, list } ] = [ data ];
+                //console.log( data );
+
+                //extracting weather info
+                const { id, name } = city; 
+
+                const [ { main, wind, dt_txt } ] = list ;
+                 
+                const { speed } = wind;
+                                 
+                const { temp, humidity } = main;
+
+              
+  
+                setWeatherArrayInfo ( [ id, cod, name, dt_txt, temp, humidity, speed ] );
+                
+
             });
-        
+
+          
+         
         
 
     }, [ dependecy ]); 

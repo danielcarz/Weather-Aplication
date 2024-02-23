@@ -12,19 +12,17 @@ export const WeatherCard = () => {
     
     const { weatherArrayInfo } = useContext( Contex );
 
+   
+  
+ 
+    //console.log( weatherArrayInfo ) 
+ 
     
-    if( weatherArrayInfo[0] ){
-        console.log( weatherArrayInfo[0].city  )
-    }
     
-    
-    return (
-        <div>
-
-            
-             
-        </div>
-    );  
+     
+   return ( 
+    <h1>weather card</h1>
+); 
 
     
 

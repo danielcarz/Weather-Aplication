@@ -14,7 +14,7 @@ export const PageOne = () => {
 
           <ComponentOne></ComponentOne>
 
-          <WeatherCard></WeatherCard>
+          <WeatherCard></WeatherCard> 
 
          
            
