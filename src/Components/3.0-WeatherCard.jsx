@@ -3,6 +3,9 @@ import React, { useState, useEffect, useContext } from "react";
 //context
 import { Contex } from './Hooks/Contex/CreateContext';
 
+//wrappers components
+import { CurrentWeather } from './WrappersComponents/index.js';
+
 
 //styles
 
@@ -21,7 +24,10 @@ export const WeatherCard = () => {
     
      
    return ( 
-    <h1>weather card</h1>
+        <>
+            <CurrentWeather></CurrentWeather>
+        
+        </>
 ); 
 
     
