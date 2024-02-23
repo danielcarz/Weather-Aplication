@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useContext } from "react";
 
 //context
-//import { Contex } from './Hooks/Contex/CreateContext';
-
+import { Contex } from '../Hooks/Contex/CreateContext';
 
 //styles
 import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 
 export const CurrentWeather = () => {
 
+    //contex
+    const { weatherArrayInfo } = useContext( Contex );
 
+    console.log('weatherArray is', weatherArrayInfo)
      
    return ( 
         <section className="currentWeatherWrapper">
  
-            <figure className="currentWeatherImage">
+            <figure className="currentWeatherImage"> 
                 <img alt="image_weather_state"></img>
             </figure>
 

@@ -16,10 +16,8 @@ import React, { useState } from "react";
         const handleInputChange = (event) => {
     
             const value = event.target.value;
-            setInputValue(value);
+            setInputValue(value); 
 
-            
-    
           
         };  
         

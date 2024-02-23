@@ -11,7 +11,7 @@ import { Contex } from './CreateContext';
 //custom hooks 
 import { fetchApi, handleForms } from '../CustomHooks/index';
 
-
+ 
 
 
 export const ContexProvider = ( { children } ) => { 
@@ -20,14 +20,11 @@ export const ContexProvider = ( { children } ) => {
     const { inputValue, pais, handleInputChange, handleSubmit, dependecy: isNewValue, setIsNewValue } = handleForms( );
 
 //WEATHER ARRAY INFO
-
-    
+  
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
     //console.log( 'iinfo', weatherArrayInfo );
 
 //FETCH
-
-   
 
     useEffect( ( ) => {
 
@@ -35,7 +32,7 @@ export const ContexProvider = ( { children } ) => {
 
             .then( data => {
 
-                setWeatherArrayInfo( [ data ] );
+               
 
                 const [ { cod, city, list } ] = [ data ];
                 //console.log( data );
@@ -51,7 +48,7 @@ export const ContexProvider = ( { children } ) => {
 
               
   
-                setWeatherArrayInfo ( [ id, cod, name, dt_txt, temp, humidity, speed ] );
+                setWeatherArrayInfo ( [ { id: id, code: cod, nameCity: name, date: dt_txt, temperature: temp, humi: humidity, speedWint: speed} ] );
                 
 
             });
@@ -75,7 +72,7 @@ export const ContexProvider = ( { children } ) => {
                 inputValue,
                 handleInputChange,
                 handleSubmit
-                 
+                  
             }
             
             
