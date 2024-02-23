@@ -15,7 +15,7 @@ export const WeatherCard = () => {
    
   
  
-    //console.log( weatherArrayInfo ) 
+    console.log( weatherArrayInfo ) 
  
     
     

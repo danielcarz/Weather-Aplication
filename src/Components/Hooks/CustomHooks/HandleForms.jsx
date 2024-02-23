@@ -10,7 +10,7 @@ import React, { useState } from "react";
     
         const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
 
-        const [ dependecy, setDependency ] = useState( false )
+        const [ isNewValue, setIsNewValue ] = useState( false )
     
     
         const handleInputChange = (event) => {
@@ -28,7 +28,7 @@ import React, { useState } from "react";
     
             setPais(inputValue); 
 
-            setDependency( !dependecy );
+            setIsNewValue( !isNewValue );
     
            
         };
@@ -43,7 +43,7 @@ import React, { useState } from "react";
 
             handleSubmit,
 
-            dependecy
+            isNewValue
         }
     };
 

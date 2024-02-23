@@ -17,7 +17,7 @@ import { fetchApi, handleForms } from '../CustomHooks/index';
 export const ContexProvider = ( { children } ) => { 
 
 //FORMS
-    const { inputValue, pais, handleInputChange, handleSubmit, dependecy, setDependency } = handleForms( );
+    const { inputValue, pais, handleInputChange, handleSubmit, dependecy: isNewValue, setIsNewValue } = handleForms( );
 
 //WEATHER ARRAY INFO
 
@@ -32,7 +32,7 @@ export const ContexProvider = ( { children } ) => {
     useEffect( ( ) => {
 
         fetchApi( pais )
-        
+
             .then( data => {
 
                 setWeatherArrayInfo( [ data ] );
@@ -60,7 +60,7 @@ export const ContexProvider = ( { children } ) => {
          
         
 
-    }, [ dependecy ]); 
+    }, [ isNewValue ]); 
    
 
   
