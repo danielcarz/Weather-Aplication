@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { fetchApi, handleForms } from '../CustomHooks/index';
+import { fetchApi, handleForms, weatherImageSelected } from '../CustomHooks/index';
 
  
 
@@ -41,7 +41,7 @@ export const ContexProvider = ( { children } ) => {
                 //extracting weather info
                 const { id, name } = city; 
 
-                const [ { main, wind, dt_txt } ] = list ;
+                const [ { main, wind, dt_txt, rain, weather } ] = list ;
                  
                 const { speed } = wind;
                                  
@@ -49,7 +49,16 @@ export const ContexProvider = ( { children } ) => {
  
               
   
-                setWeatherArrayInfo (  { id: id, code: cod, nameCity: name, date: dt_txt, temperature: temp, humi: humidity, speedWint: speed}  );
+                setWeatherArrayInfo (  { 
+                    id: id, code: cod, 
+                    nameCity: name,
+                    date: dt_txt, 
+                    temperature: temp, 
+                    humi: humidity, 
+                    speedWint: speed,
+                    rain: rain,
+                    conditionsInfo: weather
+                }  );
                 
 
             });
@@ -60,13 +69,15 @@ export const ContexProvider = ( { children } ) => {
 
     }, [ isNewValue ]); 
    
+//WEATHER IMAGE 
 
+    weatherImageSelected( weatherArrayInfo.temperature  );
   
     return(  
         <Contex.Provider value = { 
  
             {  
-               //fetch
+               //WEATHER ARRAY INFO
                 weatherArrayInfo,
 
                 //forms

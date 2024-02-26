@@ -11,7 +11,7 @@ export const CurrentWeather = () => {
     //contex
     const { weatherArrayInfo } = useContext( Contex );
 
-    console.log('weatherArray is', weatherArrayInfo)
+    //console.log('weatherArray is', weatherArrayInfo)
      
    return ( 
         <section className="currentWeatherWrapper">
@@ -22,7 +22,9 @@ export const CurrentWeather = () => {
 
             <section className="currentWeatherInfo">
                 <h3>Weather state info</h3>
-                <h3> { weatherArrayInfo.temperature } </h3>
+                <h3>Ciudad: { weatherArrayInfo.nameCity } </h3>
+                <h3>Clima: { weatherArrayInfo.temperature } </h3>
+                <h3>lluvia</h3>
             </section>
 
             <section className="currentWeatherfeatures">
