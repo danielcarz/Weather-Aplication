@@ -41,23 +41,35 @@ export const ContexProvider = ( { children } ) => {
                 //extracting weather info
                 const { id, name } = city; 
 
-                const [ { main, wind, dt_txt, rain, weather } ] = list ;
+                const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
                  
                 const { speed } = wind;
                                  
                 const { temp, humidity } = main;
- 
+
+                const { description } = weather[0];
+                console.log( description )
               
-  
+   
                 setWeatherArrayInfo (  { 
-                    id: id, code: cod, 
+                    id: id, code: cod,
+
                     nameCity: name,
-                    date: dt_txt, 
+                  
+                    date: dt_txt,
+
                     temperature: temp, 
+
                     humi: humidity, 
+
                     speedWint: speed,
+
                     rain: rain,
-                    conditionsInfo: weather
+                    pop: pop,
+
+                    conditionsInfo: weather,
+                    weatherCondition: description,
+
                 }  );
                 
 
