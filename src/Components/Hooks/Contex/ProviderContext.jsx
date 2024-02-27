@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { fetchApi, handleForms, weatherImageSelected } from '../CustomHooks/index';
+import { fetchApi, handleForms, weatherImageSelected, GetCentigrades } from '../CustomHooks/index';
 
  
 
@@ -18,10 +18,10 @@ export const ContexProvider = ( { children } ) => {
 
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = handleForms( );
-
     console.log( isNewValue );
-//WEATHER ARRAY INFO
-  
+
+
+//WEATHER ARRAY INFO 
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
     //console.log( 'iinfo', weatherArrayInfo );
 
@@ -80,17 +80,23 @@ export const ContexProvider = ( { children } ) => {
         
 
     }, [ isNewValue ]); 
+
    
 //WEATHER IMAGE 
-
     weatherImageSelected( weatherArrayInfo.temperature  );
-  
+
+
+//WEATHER CELCIUS
+    const GetCelcius = GetCentigrades( weatherArrayInfo.temperature );
+
+    
     return(  
         <Contex.Provider value = { 
  
             {  
                //WEATHER ARRAY INFO
                 weatherArrayInfo,
+                GetCelcius,
 
                 //forms
                 inputValue,
