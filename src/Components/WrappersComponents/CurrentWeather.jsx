@@ -9,9 +9,9 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 export const CurrentWeather = () => {
 
     //contex
-    const { weatherArrayInfo } = useContext( Contex );
+    const { weatherArrayInfo, GetCelcius } = useContext( Contex );
 
-    //console.log('weatherArray is', weatherArrayInfo)
+    console.log('weatherArray is', GetCelcius)
      
    return ( 
         <section className="currentWeatherWrapper">
@@ -24,7 +24,7 @@ export const CurrentWeather = () => {
 
                 <h3 className="weatherCondition" > { weatherArrayInfo.weatherCondition} </h3>
                
-                <h3 className="temperature"> { weatherArrayInfo.temperature } </h3>
+                <h3 className="temperature"> { GetCelcius }º C  </h3>
                
             </section>
 
