@@ -4,7 +4,7 @@
     export const fetchApi = async ( cityName ) => {
 
         
-        const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
+        const apiKey = process.env.WEATHER_URL; // Coloca tu API key aquí
         
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
         
