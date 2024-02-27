@@ -12,7 +12,7 @@ import { Contex } from './CreateContext';
 import { fetchApi, handleForms, weatherImageSelected, GetCentigrades } from '../CustomHooks/index';
 
  
-
+ 
 
 export const ContexProvider = ( { children } ) => { 
 
@@ -34,7 +34,7 @@ export const ContexProvider = ( { children } ) => {
             .then( data => {
 
                
-
+ 
                 const [ { cod, city, list } ] = [ data ];
                 console.log( data );
 
@@ -93,7 +93,7 @@ export const ContexProvider = ( { children } ) => {
     return(  
         <Contex.Provider value = { 
  
-            {  
+            {   
                //WEATHER ARRAY INFO
                 weatherArrayInfo,
                 GetCelcius,
