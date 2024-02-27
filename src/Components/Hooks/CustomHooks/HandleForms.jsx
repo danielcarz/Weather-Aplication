@@ -22,8 +22,10 @@ import React, { useState } from "react";
         };  
         
     
-        const handleSubmit = () => {
-    
+        const handleSubmit = ( event ) => {
+            
+            event.preventDefault();
+            
             setPais(inputValue); 
 
             setIsNewValue( !isNewValue );

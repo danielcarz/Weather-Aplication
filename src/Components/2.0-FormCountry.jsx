@@ -10,23 +10,25 @@ import { Contex } from './Hooks/Contex/CreateContext';
 export const ComponentOne = () => {
 
     
-    const { inputValue, handleInputChange, handleSubmit, weatherArrayInfo } = useContext( Contex );
+    const { inputValue, handleInputChange, handleSubmit } = useContext( Contex );
 
-    
+   
 
     
     return (
-        <div>
-            <h1>Buscador de países</h1>
+        <form onSubmit={ handleSubmit } >
+           
             <input 
                 type="text"
                 placeholder=" Clima en tu ciudad o pais " 
                 value={inputValue}
+
                 onChange={handleInputChange}
+              
             />
-            <button onClick={ () => handleSubmit() }>Obtener clima</button> 
+          
              
-        </div>
+        </form>
     );  
 
     
