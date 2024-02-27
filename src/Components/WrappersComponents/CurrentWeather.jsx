@@ -16,24 +16,24 @@ export const CurrentWeather = () => {
    return ( 
         <section className="currentWeatherWrapper">
  
-            <figure className="currentWeatherImage"> 
+          {/*   <figure className="currentWeatherImage"> 
                 <img alt="image_weather_state"></img> 
-            </figure>
+            </figure> */}
 
             <section className="currentWeatherInfo">
 
-                <h3>Weather state info: { weatherArrayInfo.weatherCondition} </h3>
+                <h3 className="weatherCondition" > { weatherArrayInfo.weatherCondition} </h3>
                
-                <h3>Temperatura: { weatherArrayInfo.temperature } </h3>
+                <h3 className="temperature"> { weatherArrayInfo.temperature } </h3>
                
             </section>
 
             <section className="currentWeatherfeatures">
-                <div>
-                    <h5>Probabilidad de precipitación: {  weatherArrayInfo.pop } % </h5>
+                <div className="pop">
+                    <h5>Pop{  weatherArrayInfo.pop } % </h5>
                 </div> 
 
-                <div>
+                <div className="wind">
                     <h5>viento {weatherArrayInfo.speedWint}</h5>
                 </div>
             </section>

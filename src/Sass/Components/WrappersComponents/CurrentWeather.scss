@@ -8,26 +8,58 @@
 
 
 @mixin styles_phone () {
-  width: 100%;
+
+    width: 100%;
+    height: 70vh;
     
-  color: rgb(232, 248, 3);
-  border: 1px solid rgb(5, 9, 245);
+    padding: 20px;
+      
+    color: rgb(232, 248, 3);
+    border: 1px solid rgb(5, 9, 245);
 
-  .currentWeatherImage{
+    border: 1px solid red;
 
-    display: flex;
-    flex-direction: column;
+    .currentWeatherInfo{
+      text-align: center;
 
-    border: 1px solid rgb(195, 248, 5);
-  }; 
+      color: black;
 
-  .currentWeatherfeatures{
-    display: flex;
-    flex-direction: column;
     
-    border: 1px solid rgb(250, 246, 8);
 
-  }
+      .weatherCondition{
+
+      };
+
+      .temperature{
+
+      }
+    }
+
+   /*  .currentWeatherImage{
+
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid rgb(195, 248, 5);
+    };  */
+
+    
+
+    .currentWeatherfeatures{
+      display: flex;
+      
+      
+      border: 1px solid rgb(250, 246, 8);
+
+      .pop{
+        width: 50%;
+      }
+
+      .wind{
+        width: 50%;
+      }
+
+    }
     
   }
   
