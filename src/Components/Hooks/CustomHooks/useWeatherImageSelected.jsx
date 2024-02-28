@@ -1,7 +1,7 @@
 
     //styles
 
-    export const weatherImageSelected =  ( temperature ) => {
+    export const useWeatherImageSelected =  ( temperature ) => {
 
         console.log( temperature );
 

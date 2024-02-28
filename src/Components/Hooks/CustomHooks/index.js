@@ -1,11 +1,11 @@
 //Fetch Api
-export * from './FetchApi.jsx';
+export * from './useFetchApi.jsx';
 
 //Handle Forms
-export * from './HandleForms.jsx';
+export * from './useHandleForms.jsx';
 
 //weather image
-export * from './weatherImageSelected.jsx';
+export * from './useWeatherImageSelected.jsx';
 
 //Get celcius
-export * from './GetCentigrades.jsx';
+export * from './useGetCentigrades.jsx';    

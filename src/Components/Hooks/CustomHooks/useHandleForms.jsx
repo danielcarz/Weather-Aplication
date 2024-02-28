@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
     //styles
 
-    export const handleForms =  () => {
+    export const useHandleForms =  () => {
 
         const [inputValue, setInputValue] = useState('');
 

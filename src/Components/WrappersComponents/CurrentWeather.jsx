@@ -34,7 +34,7 @@ export const CurrentWeather = () => {
         imageWeather = cloudy;
     }
      
-
+ 
    return ( 
         <section className="currentWeatherWrapper">
  

@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { fetchApi, handleForms, weatherImageSelected, GetCentigrades } from '../CustomHooks/index';
+import { useFetchApi, useHandleForms, useWeatherImageSelected, useGetCentigrades } from '../CustomHooks/index';
 
  
  
@@ -17,9 +17,9 @@ import { fetchApi, handleForms, weatherImageSelected, GetCentigrades } from '../
 export const ContexProvider = ( { children } ) => { 
 
 //FORMS
-    const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = handleForms( );
+    const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
     //console.log( isNewValue );
-
+ 
 
 //WEATHER ARRAY INFO 
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
@@ -29,15 +29,14 @@ export const ContexProvider = ( { children } ) => {
 
     useEffect( ( ) => {
 
-        fetchApi( pais )
+        useFetchApi( pais )
 
             .then( data => {
 
                
  
                 const [ { cod, city, list } ] = [ data ];
-                console.log( 'data', data );
-
+                console.log( 'data', data ); 
                 //extracting weather info
                 const { id, name } = city; 
 
@@ -85,16 +84,16 @@ export const ContexProvider = ( { children } ) => {
 
    
 //WEATHER IMAGE 
-    weatherImageSelected( weatherArrayInfo.temperature  );
+    useWeatherImageSelected( weatherArrayInfo.temperature  );
 
 
 //WEATHER CELCIUS
-    const GetCelcius = GetCentigrades( weatherArrayInfo.temperature );
-
+    const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
+ 
     
     return(  
         <Contex.Provider value = { 
- 
+  
             {   
                //WEATHER ARRAY INFO
                 weatherArrayInfo,
