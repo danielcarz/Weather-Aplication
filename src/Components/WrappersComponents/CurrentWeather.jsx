@@ -10,20 +10,21 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 import sun from '../../Assets/sun.png';
 import brokenClouds from '../../Assets/dark-cloud.png';
 import cloudy from '../../Assets/cloudy.png';
+import thunderstorm  from '../../Assets/stormy.png';
 
 export const CurrentWeather = () => {
 
     //contex
     const { weatherArrayInfo, GetCelcius } = useContext( Contex );
 
-    console.log('weatherArray is', weatherArrayInfo)
+    //console.log('weatherArray is', weatherArrayInfo)
 
     let imageWeather;
 
-    if( weatherArrayInfo.weatherCondition  === 'light rain'){
-        imageWeather = sun;
+    if( weatherArrayInfo.weatherCondition  === 'Rain'){
+        imageWeather = thunderstorm;
         
-        console.log( 'light rain' )
+        //console.log( 'light rain' )
    
         
     }else if ( weatherArrayInfo.weatherCondition  === 'broken clouds' ){

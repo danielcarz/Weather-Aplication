@@ -18,7 +18,7 @@ export const ContexProvider = ( { children } ) => {
 
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = handleForms( );
-    console.log( isNewValue );
+    //console.log( isNewValue );
 
 
 //WEATHER ARRAY INFO 
@@ -36,7 +36,7 @@ export const ContexProvider = ( { children } ) => {
                
  
                 const [ { cod, city, list } ] = [ data ];
-                console.log( data );
+                console.log( 'data', data );
 
                 //extracting weather info
                 const { id, name } = city; 
@@ -47,8 +47,10 @@ export const ContexProvider = ( { children } ) => {
                                  
                 const { temp, humidity } = main;
 
-                const { description } = weather[0];
-                console.log( description )
+                const { main: weatherMain } = weather[0];
+
+
+                console.log( 'description', weatherMain )
               
    
                 setWeatherArrayInfo (  { 
@@ -68,7 +70,7 @@ export const ContexProvider = ( { children } ) => {
                     pop: pop,
 
                     conditionsInfo: weather,
-                    weatherCondition: description,
+                    weatherCondition: weatherMain,
 
                 }  );
                 
