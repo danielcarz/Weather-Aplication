@@ -19,6 +19,22 @@
 
     border: 1px solid red;
 
+    .currentWeatherImage{
+
+      width: 40%;
+
+      margin: auto;
+
+
+      border: 1px solid blue; 
+
+      img{
+        width: 100px; 
+        height: 100%;
+      }
+
+    }
+
     .currentWeatherInfo{
       text-align: center;
 

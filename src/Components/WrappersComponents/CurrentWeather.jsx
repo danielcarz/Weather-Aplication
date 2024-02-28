@@ -16,7 +16,7 @@ export const CurrentWeather = () => {
     //contex
     const { weatherArrayInfo, GetCelcius } = useContext( Contex );
 
-    //console.log('weatherArray is', GetCelcius)
+    console.log('weatherArray is', weatherArrayInfo)
 
     let imageWeather;
 
@@ -37,7 +37,7 @@ export const CurrentWeather = () => {
    return ( 
         <section className="currentWeatherWrapper">
  
-            <figure className="currentWeatherImage"> 
+            <figure className="currentWeatherImage">  
                 { 
                     
                     imageWeather && <img src={ imageWeather  } alt="image status weather" ></img>
