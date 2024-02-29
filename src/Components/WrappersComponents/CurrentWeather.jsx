@@ -13,7 +13,7 @@ export const CurrentWeather = () => {
     //contex
     const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather } = useContext( Contex );
 
-    //console.log('iamge weather', imageWeather)
+    console.log('iamge weather', weatherArrayInfo)
      
  
 
@@ -29,11 +29,11 @@ export const CurrentWeather = () => {
                 } 
 
             </figure> 
-            
+
 
             <section className="currentWeatherInfo">
 
-                <h3 className="weatherCondition" > { weatherArrayInfo.weatherCondition } </h3>
+                <h3 className="weatherCondition" > { weatherArrayInfo.weatherDescription } </h3>
                
                 <h3 className="temperature"> { GetCelcius }º C  </h3>
                
