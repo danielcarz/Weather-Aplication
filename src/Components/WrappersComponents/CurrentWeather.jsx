@@ -6,45 +6,30 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 
-//images 
-import sun from '../../Assets/sun.png';
-import brokenClouds from '../../Assets/dark-cloud.png';
-import cloudy from '../../Assets/cloudy.png';
-import thunderstorm  from '../../Assets/stormy.png';
+
 
 export const CurrentWeather = () => {
 
     //contex
-    const { weatherArrayInfo, GetCelcius } = useContext( Contex );
+    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather } = useContext( Contex );
 
-    //console.log('weatherArray is', weatherArrayInfo)
-
-    let imageWeather;
-
-    if( weatherArrayInfo.weatherCondition  === 'Rain'){
-        imageWeather = thunderstorm;
-        
-        //console.log( 'light rain' )
-   
-        
-    }else if ( weatherArrayInfo.weatherCondition  === 'broken clouds' ){
-        imageWeather = brokenClouds;
-
-    }else if ( weatherArrayInfo.weatherCondition  === 'overcast clouds' ){
-        imageWeather = cloudy;
-    }
+    //console.log('iamge weather', imageWeather)
      
  
+
    return ( 
         <section className="currentWeatherWrapper">
  
             <figure className="currentWeatherImage">  
+
                 { 
                     
-                    imageWeather && <img src={ imageWeather  } alt="image status weather" ></img>
+                    imageWeather && <img src={  imageWeather  } alt="image status weather" ></img>
                     
-                }
+                } 
+
             </figure> 
+            
 
             <section className="currentWeatherInfo">
 
@@ -54,14 +39,22 @@ export const CurrentWeather = () => {
                
             </section>
 
+
             <section className="currentWeatherfeatures">
+
                 <div className="pop">
+
                     <h5>Pop{  weatherArrayInfo.pop } % </h5>
+
                 </div> 
 
+
                 <div className="wind">
+
                     <h5>viento {weatherArrayInfo.speedWint}</h5>
+
                 </div>
+
             </section>
         
         </section>

@@ -8,4 +8,7 @@ export * from './useHandleForms.jsx';
 export * from './useWeatherImageSelected.jsx';
 
 //Get celcius
-export * from './useGetCentigrades.jsx';    
+export * from './useGetCentigrades.jsx';
+
+//get weather image
+export * from './useGetWeatherImage.jsx';

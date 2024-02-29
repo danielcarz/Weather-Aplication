@@ -9,12 +9,13 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { useFetchApi, useHandleForms, useWeatherImageSelected, useGetCentigrades } from '../CustomHooks/index';
+import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades } from '../CustomHooks/index';
 
  
  
-
-export const ContexProvider = ( { children } ) => { 
+ 
+export const ContexProvider = ( { children } ) => {
+ 
 
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
@@ -30,13 +31,13 @@ export const ContexProvider = ( { children } ) => {
     useEffect( ( ) => {
 
         useFetchApi( pais )
-
+ 
             .then( data => {
 
                
  
                 const [ { cod, city, list } ] = [ data ];
-                console.log( 'data', data ); 
+                //console.log( 'data', data ); 
                 //extracting weather info
                 const { id, name } = city; 
 
@@ -46,10 +47,10 @@ export const ContexProvider = ( { children } ) => {
                                  
                 const { temp, humidity } = main;
 
-                const { main: weatherMain } = weather[0];
+                const { main: weatherMain, description } = weather[0];
 
 
-                console.log( 'description', weatherMain )
+                //console.log( 'description', description )
               
    
                 setWeatherArrayInfo (  { 
@@ -70,6 +71,7 @@ export const ContexProvider = ( { children } ) => {
 
                     conditionsInfo: weather,
                     weatherCondition: weatherMain,
+                    weatherDescription: description
 
                 }  );
                 
@@ -80,13 +82,13 @@ export const ContexProvider = ( { children } ) => {
          
         
 
-    }, [ isNewValue ]); 
+    }, [ isNewValue ]);  
 
    
 //WEATHER IMAGE 
-    useWeatherImageSelected( weatherArrayInfo.temperature  );
+    const { imageWeather } = useGetWeatherImage( weatherArrayInfo.weatherCondition, weatherArrayInfo.weatherDescription );
 
-
+ 
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
  
@@ -102,7 +104,11 @@ export const ContexProvider = ( { children } ) => {
                 //forms
                 inputValue,
                 handleInputChange,
-                handleSubmit
+                handleSubmit,
+
+                //weather image
+                useGetWeatherImage,
+                imageWeather
                   
             }
             
