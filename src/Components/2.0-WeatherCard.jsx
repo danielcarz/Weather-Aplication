@@ -4,7 +4,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Contex } from './Hooks/Contex/CreateContext.jsx';
 
 //wrappers components
-import { FormCountry, CurrentWeather, PastWeatherState } from './WrappersComponents/index.js';
+import { FormCountry, CurrentWeather, PredictionWeatherState } from './WrappersComponents/index.js';
 
  
 //styles
@@ -27,7 +27,7 @@ export const WeatherCard = () => {
         <>
             <FormCountry></FormCountry>
             <CurrentWeather></CurrentWeather>
-            <PastWeatherState></PastWeatherState>
+            <PredictionWeatherState></PredictionWeatherState>
         
         </>
 ); 

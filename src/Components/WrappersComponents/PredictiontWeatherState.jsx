@@ -6,7 +6,7 @@ import React from "react";
 //styles
 
 
-export const PastWeatherState = () => {
+export const PredictionWeatherState = () => {
 
     return (
        <section>

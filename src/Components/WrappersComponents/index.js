@@ -6,4 +6,4 @@ export * from './FormCountry';
 export * from './CurrentWeather';
 
 //Past weather Components
-export * from './PastWeatherState'; 
+export * from './PredictiontWeatherState';  
