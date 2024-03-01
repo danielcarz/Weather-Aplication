@@ -9,7 +9,7 @@ import '../../Sass/Components/WrappersComponents/PredictionWeatherState.scss';
 export const PredictionWeatherState = () => {
 
     return (
-       <section className="predictionWeatherContainer">
+        <section className="predictionWeatherContainer">
 
             <div className="predictionTittleWrapper">
 
@@ -42,6 +42,6 @@ export const PredictionWeatherState = () => {
 
             
             
-       </section>
+        </section>
       );
 }

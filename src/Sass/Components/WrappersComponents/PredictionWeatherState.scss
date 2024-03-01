@@ -9,7 +9,28 @@
 
 @mixin styles_phone () {
 
-   border: 1px solid yellow;
+   
+
+    border: 1px solid yellow;
+
+   .predictionTittleWrapper{
+     p{
+        margin: 0;
+     }
+   }
+
+   .PredictionInfoStateWrapper{
+
+    width: 30%;
+    padding: 10px;
+
+    p{
+        margin: 0;
+    }
+
+    border: 1px solid yellow;
+
+   }
     
   }
   
