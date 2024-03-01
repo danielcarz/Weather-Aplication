@@ -4,35 +4,43 @@ import React from "react";
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/PredictionWeatherState.scss';
 
 export const PredictionWeatherState = () => {
 
     return (
-       <section>
+       <section className="predictionWeatherContainer">
 
-            <div>
+            <div className="predictionTittleWrapper">
 
                 <p>predictions for next week</p>
-
+ 
             </div>
 
-            <div>
-                <p>date</p>
 
-                <p>State weather</p>
+            <section className="PredictionInfoStateWrapper">
+
+                <div>
+                    <p>date</p>
+
+                    <p>State weather</p>
+                    
                 
-                <p> weather hour </p>
 
-            </div>
+                </div>
 
-            <figure>
-                <img alt="weather image"></img>
-            </figure>
+                <figure>
+                    <img alt="weather image"></img>
+                </figure>
 
-            <div>
-                <p>00 º celcius </p>
-            </div>
+                <div>
+                    <p>00 º celcius </p>
+                </div>
+
+
+            </section>
+
+            
             
        </section>
       );
