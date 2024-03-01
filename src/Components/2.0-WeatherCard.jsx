@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 
 //context
-import { Contex } from './Hooks/Contex/CreateContext';
+import { Contex } from './Hooks/Contex/CreateContext.jsx';
 
 //wrappers components
-import { CurrentWeather } from './WrappersComponents/index.js';
+import { FormCountry, CurrentWeather } from './WrappersComponents/index.js';
 
 
 //styles
@@ -25,6 +25,7 @@ export const WeatherCard = () => {
      
    return ( 
         <>
+            <FormCountry></FormCountry>
             <CurrentWeather></CurrentWeather>
         
         </>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 
 //context
-import { Contex } from './Hooks/Contex/CreateContext';
+import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
 
 
-export const ComponentOne = () => {
+export const FormCountry = () => {
 
     
     const { inputValue, handleInputChange, handleSubmit } = useContext( Contex );
@@ -18,7 +18,8 @@ export const ComponentOne = () => {
     return (
         <form onSubmit={ handleSubmit } >
            
-            <input 
+            <input
+
                 type="text"
                 placeholder=" Clima en tu ciudad o pais " 
                 value={inputValue}
