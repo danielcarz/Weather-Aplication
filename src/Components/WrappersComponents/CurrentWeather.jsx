@@ -8,12 +8,12 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 
 
 
-export const CurrentWeather = () => {
+export const CurrentWeather = () => { 
 
     //contex
     const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather } = useContext( Contex );
 
-    console.log('iamge weather', weatherArrayInfo)
+    //console.log('iamge weather', weatherArrayInfo)
      
  
 

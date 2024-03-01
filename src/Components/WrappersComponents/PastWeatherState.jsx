@@ -10,7 +10,21 @@ export const PastWeatherState = () => {
 
     return (
        <section>
-            <p>State weather</p>
+
+            <div>
+
+                <p>predictions for next week</p>
+
+            </div>
+
+            <div>
+                <p>date</p>
+
+                <p>State weather</p>
+                
+                <p> weather hour </p>
+
+            </div>
 
             <figure>
                 <img alt="weather image"></img>
@@ -19,6 +33,7 @@ export const PastWeatherState = () => {
             <div>
                 <p>00 º celcius </p>
             </div>
+            
        </section>
       );
 }

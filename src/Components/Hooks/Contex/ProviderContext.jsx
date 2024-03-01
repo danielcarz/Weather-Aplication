@@ -38,6 +38,8 @@ export const ContexProvider = ( { children } ) => {
  
                 const [ { cod, city, list } ] = [ data ];
                 //console.log( 'data', data ); 
+
+
                 //extracting weather info
                 const { id, name } = city; 
 

@@ -2,7 +2,7 @@
     //styles
 
     export const useFetchApi = async ( cityName ) => {
-       console.log('api is', import.meta.env.REACT_APP_WEATHER_URL)
+       //console.log('api is', import.meta.env.REACT_APP_WEATHER_URL)
         
         const apiKey = import.meta.env.VITE_REACT_APP_WEATHER_URL; 
         
@@ -12,7 +12,7 @@
         const response = await fetch( url );
         const data = await response.json();
         
-        console.log( 'fetchapi', data );
+        //console.log( 'fetchapi', data );
         
         return data; 
     };
