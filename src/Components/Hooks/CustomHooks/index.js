@@ -12,3 +12,6 @@ export * from './useGetCentigrades.jsx';
 
 //get weather image
 export * from './useGetWeatherImage.jsx';
+
+//get current Date
+export * from './useGetCurrentDate.jsx';

@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
         const [pais, setPais] = useState('');
     
-        const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
+        //const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
 
         const [ isNewValue, setIsNewValue ] = useState( false )
     

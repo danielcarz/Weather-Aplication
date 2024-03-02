@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades } from '../CustomHooks/index';
+import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades, useGetCurrentDate } from '../CustomHooks/index';
 
  
  
@@ -46,7 +46,7 @@ export const ContexProvider = ( { children } ) => {
                 const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
                  
                 const { speed } = wind;
-                                 
+                                  
                 const { temp, humidity } = main;
 
                 const { main: weatherMain, description } = weather[0];
@@ -93,6 +93,9 @@ export const ContexProvider = ( { children } ) => {
  
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
+
+//CURRENT DATE
+     const getCurrentDate = useGetCurrentDate(  ); 
  
     
     return(  
@@ -110,7 +113,10 @@ export const ContexProvider = ( { children } ) => {
 
                 //weather image
                 useGetWeatherImage,
-                imageWeather
+                imageWeather,
+
+                //current date
+                getCurrentDate
                   
             }
             

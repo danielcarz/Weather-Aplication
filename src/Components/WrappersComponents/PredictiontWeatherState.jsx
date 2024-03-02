@@ -11,7 +11,7 @@ export const PredictionWeatherState = () => {
 
     //contex
     const { weatherArrayInfo } = useContext( Contex );
-    console.log('weather array info', weatherArrayInfo); 
+    //console.log('weather array info', weatherArrayInfo); 
 
     return (
         <section className="predictionWeatherContainer">
