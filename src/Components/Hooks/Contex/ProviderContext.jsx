@@ -101,7 +101,7 @@ export const ContexProvider = ( { children } ) => {
             {   
                //WEATHER ARRAY INFO
                 weatherArrayInfo,
-                GetCelcius,
+                GetCelcius, 
 
                 //forms
                 inputValue,
