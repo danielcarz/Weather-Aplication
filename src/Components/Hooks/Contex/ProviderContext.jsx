@@ -95,7 +95,9 @@ export const ContexProvider = ( { children } ) => {
     const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
 
 //CURRENT DATE
-     const getCurrentDate = useGetCurrentDate(  ); 
+    const { currentDate, nextDaysArray } = useGetCurrentDate( );
+
+    // const getCurrentDate = useGetCurrentDate(  ); 
  
     
     return(  
@@ -116,7 +118,8 @@ export const ContexProvider = ( { children } ) => {
                 imageWeather,
 
                 //current date
-                getCurrentDate
+                currentDate,
+                nextDaysArray
                   
             }
             

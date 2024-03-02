@@ -11,9 +11,9 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 export const CurrentWeather = () => { 
 
     //contex
-    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, getCurrentDate } = useContext( Contex );
+    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, currentDate, nextDaysArray } = useContext( Contex );
 
-    console.log('iamge weather', weatherArrayInfo)
+    console.log('iamge weather', currentDate)
      
  
 
@@ -23,7 +23,7 @@ export const CurrentWeather = () => {
             <div>
                 <h2 className="currentWeatherTitle"> { weatherArrayInfo.nameCity } </h2>
 
-                <h2> { getCurrentDate } </h2>
+                {/* <h2> { getCurrentDate } </h2> */}
             
             </div>
  

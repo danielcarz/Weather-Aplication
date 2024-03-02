@@ -7,7 +7,28 @@ import React from "react";
 
         const currentDate =  fecha.toLocaleDateString('es-ES', opciones);
 
-        return currentDate;
+        const nextDateOne = new Date ( fecha )
+        nextDateOne.setDate( fecha.getDate() + 1 );
+
+        const nextDateTwo = new Date( fecha )
+        nextDateTwo.setDate( fecha.getDate() + 2 );
+
+        const nextDaysArray = [
+             
+            nextDateOne.toLocaleDateString( 'es-ES', opciones),
+            nextDateTwo.toLocaleDateString( 'es-ES', opciones),
+
+         ]
+
+
+        return {
+            //current date
+            currentDate,
+
+            //next days Array
+            nextDaysArray
+
+        }
        
     };
 
