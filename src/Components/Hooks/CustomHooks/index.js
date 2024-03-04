@@ -15,3 +15,6 @@ export * from './useGetWeatherImage.jsx';
 
 //get current Date
 export * from './useGetCurrentDate.jsx';
+
+//test
+export * from './useGetDataFromApi.jsx';
