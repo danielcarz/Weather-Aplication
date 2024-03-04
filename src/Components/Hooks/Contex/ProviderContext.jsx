@@ -9,10 +9,11 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades, useGetCurrentDate } from '../CustomHooks/index';
+import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades, useGetCurrentDate, useGetDataFromApi } from '../CustomHooks/index';
 
- 
- 
+
+
+
  
 export const ContexProvider = ( { children } ) => {
  
@@ -24,20 +25,20 @@ export const ContexProvider = ( { children } ) => {
 
 //WEATHER ARRAY INFO 
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
-    //console.log( 'iinfo', weatherArrayInfo );
+   
 
 //FETCH
 
-    useEffect( ( ) => {
+  /*   const getFetchData = ( pais ) => {
 
-        useFetchApi( pais )
+        return useFetchApi( pais )
  
             .then( data => {
  
                
  
                 const [ { cod, city, list } ] = [ data ];
-                //console.log( 'data', data ); 
+                //console.log( 'data', cod ); 
 
 
                 //extracting weather info
@@ -49,14 +50,14 @@ export const ContexProvider = ( { children } ) => {
                                   
                 const { temp, humidity } = main;
 
-                const { main: weatherMain, description } = weather[0];
+                const { main: weatherMain, description } = weather[0]; 
 
 
                 //console.log( 'description', description )
               
    
-                setWeatherArrayInfo (  { 
-                    id: id, code: cod,
+                return   { 
+                  id: id, code: cod,
 
                     nameCity: name,
                   
@@ -73,18 +74,34 @@ export const ContexProvider = ( { children } ) => {
 
                     conditionsInfo: weather,
                     weatherCondition: weatherMain,
-                    weatherDescription: description
+                    weatherDescription: description 
 
-                }  );
+                }   ;
                 
 
-            });
+            })
+            .catch((error) => {
+                // Promise rejected, handle the error
+                console.error('Error fetching weather data:', error);
+              });
 
+    } */
+
+    useEffect( ( ) => {
+
+        
+        useGetDataFromApi( pais, useFetchApi )
+            .then( ( weatherData ) => { 
+                
+
+                if( weatherData ) { setWeatherArrayInfo( weatherData ); };
+
+             } );
           
          
         
 
-    }, [ isNewValue ]);  
+    }, [ pais, isNewValue ]);  
 
    
 //WEATHER IMAGE 
@@ -97,7 +114,10 @@ export const ContexProvider = ( { children } ) => {
 //CURRENT DATE
     const { currentDate, nextDaysArray } = useGetCurrentDate( );
 
-    // const getCurrentDate = useGetCurrentDate(  ); 
+    // const getCurrentDate = useGetCurrentDate(  );
+
+//TESTING
+    
  
     
     return(  

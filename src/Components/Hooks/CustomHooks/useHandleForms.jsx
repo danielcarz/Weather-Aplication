@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
         const [inputValue, setInputValue] = useState('');
 
-        const [pais, setPais] = useState('');
+        const [pais, setPais] = useState( 'colombia' );
     
         //const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
 

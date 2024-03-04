@@ -26,7 +26,7 @@ export const WeatherCard = () => {
    return ( 
         <>
             <FormCountry></FormCountry>
-            <CurrentWeather></CurrentWeather>
+            <CurrentWeather></CurrentWeather> 
             <PredictionWeatherState></PredictionWeatherState>
         
         </>
