@@ -1,9 +1,9 @@
 
 //FormCountry
-export * from './FormCountry';
+export * from './1.0-FormCountry';
 
 //Current Weather Components
-export * from './CurrentWeather';
+export * from './2.0-CurrentWeather';
 
 //Past weather Components
-export * from './PredictiontWeatherState';  
+export * from './3.1PredictiontWeatherState';  
