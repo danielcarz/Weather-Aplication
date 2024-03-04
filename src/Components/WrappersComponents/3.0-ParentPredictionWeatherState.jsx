@@ -12,11 +12,16 @@ export const ParentPredictionWeatherState = ( { children } ) => {
     
 
     return (
-        <section className="ParentpredictionWeatherContainer">
+        <section className="ParentpredictionWeatherContainer"> 
 
             <h4>Predictions for next days</h4>
 
-            { children }
+            <div className="wrapper">
+
+                { children }
+
+            </div>
+
          
             
         </section>

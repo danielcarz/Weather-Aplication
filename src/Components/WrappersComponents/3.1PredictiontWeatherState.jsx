@@ -14,7 +14,7 @@ export const PredictionWeatherState = ( { valueDay } ) => {
     //console.log('weather array info', nextDays); 
 
     return (
-        <section className="predictionWeatherContainer">
+        <section className="predictionWeatherWrapper">
 
             <section className="PredictionInfoStateWrapper">
 

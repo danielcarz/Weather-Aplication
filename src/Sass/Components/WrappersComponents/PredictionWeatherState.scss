@@ -10,10 +10,12 @@
 @mixin styles_phone () {
 
    
+    width: 100%;
 
     border: 1px solid yellow;
 
    .predictionTittleWrapper{
+      
      p{
         margin: 0;
      }
@@ -31,6 +33,7 @@
     border: 1px solid yellow;
 
    }
+
     
   }
   
@@ -45,7 +48,7 @@
   
   
   
-  .predictionWeatherContainer{
+  .predictionWeatherWrapper{
     
   
     @include media-query($media_phone){

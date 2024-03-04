@@ -10,7 +10,16 @@
 @mixin styles_phone () {
 
    display: flex;
+   flex-direction: column;
 
+   .wrapper{
+    width: 100%;
+
+    display: flex;
+
+    border: 1px solid red;
+
+   }
     
     
   }
