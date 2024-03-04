@@ -2,7 +2,7 @@ import React from "react";
     //styles
 
     export const useGetCurrentDate =  (  ) => {
-        
+
         const fecha = new Date();
         const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
@@ -19,7 +19,16 @@ import React from "react";
             nextDateOne.toLocaleDateString( 'es-ES', opciones),
             nextDateTwo.toLocaleDateString( 'es-ES', opciones),
 
-         ]
+        ];
+
+        const nextDays = nextDaysArray.map( date => {
+
+            const day  =  date.split( ',' )[0].trim();
+            return {  valueDay : day };
+            
+        } );
+        
+        
 
 
         return {
@@ -27,7 +36,8 @@ import React from "react";
             currentDate,
 
             //next days Array
-            nextDaysArray
+            nextDaysArray,
+            nextDays
 
         }
        

@@ -11,9 +11,9 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 export const CurrentWeather = () => { 
 
     //contex
-    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, currentDate, nextDaysArray } = useContext( Contex );
+    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, currentDate, nextDaysArray, nextDays } = useContext( Contex );
 
-    console.log('weatherArray', weatherArrayInfo )
+    //console.log('weatherArray', nextDays )
      
  
 

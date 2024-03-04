@@ -7,26 +7,19 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/PredictionWeatherState.scss';
 
-export const PredictionWeatherState = () => {
+export const PredictionWeatherState = ( { valueDay } ) => {
 
     //contex
-    const { weatherArrayInfo } = useContext( Contex );
-    //console.log('weather array info', weatherArrayInfo); 
+    const { weatherArrayInfo, nextDays } = useContext( Contex ); 
+    //console.log('weather array info', nextDays); 
 
     return (
         <section className="predictionWeatherContainer">
 
-            <div className="predictionTittleWrapper">
-
-                <p>predictions for next week</p>
- 
-            </div>
-
-
             <section className="PredictionInfoStateWrapper">
 
                 <div>
-                    <p> { weatherArrayInfo.date } </p>
+                    { valueDay }
 
                     <p>State weather</p>
                     

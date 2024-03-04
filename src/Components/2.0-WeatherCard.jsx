@@ -13,10 +13,10 @@ import { FormCountry, CurrentWeather, PredictionWeatherState } from './WrappersC
 export const WeatherCard = () => {
 
     
-    const { weatherArrayInfo } = useContext( Contex );
-
+    const { weatherArrayInfo, nextDays } = useContext( Contex );
+ 
    
-   
+    
  
     //console.log( weatherArrayInfo )  
   
@@ -26,8 +26,18 @@ export const WeatherCard = () => {
    return ( 
         <>
             <FormCountry></FormCountry>
-            <CurrentWeather></CurrentWeather> 
-            <PredictionWeatherState></PredictionWeatherState>
+            <CurrentWeather></CurrentWeather>
+
+            <h4> predictions for next week</h4> 
+            
+            { 
+                
+                nextDays.map( ( item, index ) => ( 
+                <PredictionWeatherState key={index} valueDay={item.valueDay}>
+
+                </PredictionWeatherState> 
+            
+            ) ) }
         
         </>
 ); 
