@@ -16,22 +16,27 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                
  
                 const [ { cod, city, list } ] = [ data ];
-                //console.log( 'data', cod ); 
-
-
+                
+                
                 //extracting weather info
                 const { id, name } = city; 
-
+                
                 const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
-                 
+                //console.log( 'list', list ); 
+                
                 const { speed } = wind;
                                   
                 const { temp, humidity } = main;
 
-                const { main: weatherMain, description } = weather[0]; 
+                const { main: weatherMain, description } = weather[0];
+                
+                //extract midnight object
+
+                const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
+                
 
 
-                //console.log( 'description', description )
+                console.log( 'getMidnightDateObject', getMidnightDateObject );
               
    
                 return   { 
@@ -51,10 +56,12 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     pop: pop,
 
                     conditionsInfo: weather,
-                    weatherCondition: weatherMain,
-                    weatherDescription: description 
+                    weatherCondition: weatherMain, 
+                    weatherDescription: description,
+                    
+                    midnightDate: getMidnightDateObject
 
-                }   ;
+                }   ; 
                 
 
             })

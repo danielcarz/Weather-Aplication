@@ -13,7 +13,7 @@ export const CurrentWeather = () => {
     //contex
     const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, currentDate, nextDaysArray, nextDays } = useContext( Contex );
 
-    //console.log('weatherArray', nextDays )
+    //console.log('weatherArray', weatherArrayInfo )
      
  
 

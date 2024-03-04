@@ -25,10 +25,10 @@ export const ContexProvider = ( { children } ) => {
 
 //WEATHER ARRAY INFO 
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
-   
+    console.log(weatherArrayInfo)
 
 //FETCH
-
+ 
     useEffect( ( ) => {
 
         
