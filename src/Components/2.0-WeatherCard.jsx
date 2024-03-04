@@ -4,7 +4,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Contex } from './Hooks/Contex/CreateContext.jsx';
 
 //wrappers components
-import { FormCountry, CurrentWeather, PredictionWeatherState } from './WrappersComponents/index.js';
+import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWeatherState } from './WrappersComponents/index.js';
 
  
 //styles
@@ -28,16 +28,22 @@ export const WeatherCard = () => {
             <FormCountry></FormCountry>
             <CurrentWeather></CurrentWeather>
 
-            <h4> predictions for next week</h4> 
-            
-            { 
-                
-                nextDays.map( ( item, index ) => ( 
-                <PredictionWeatherState key={index} valueDay={item.valueDay}>
 
-                </PredictionWeatherState> 
+            <ParentPredictionWeatherState>
+
+                { 
+                    
+                    nextDays.map( ( item, index ) => ( 
+                        <PredictionWeatherState key={index} valueDay={item.valueDay}> </PredictionWeatherState> 
+                
+                    ))
+                }
+
+
+
+            </ParentPredictionWeatherState>
             
-            ) ) }
+          
         
         </>
 ); 

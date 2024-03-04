@@ -19,7 +19,7 @@ export const PredictionWeatherState = ( { valueDay } ) => {
             <section className="PredictionInfoStateWrapper">
 
                 <div>
-                    { valueDay }
+                    { valueDay } 
 
                     <p>State weather</p>
                     
