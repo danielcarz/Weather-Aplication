@@ -24,25 +24,30 @@ export const ContexProvider = ( { children } ) => {
  
 
 //WEATHER ARRAY INFO 
-    const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
-    console.log(weatherArrayInfo)
+    const [weatherArrayInfo, setWeatherArrayInfo] = useState( { midnightTemperatures: [ ] }  );
 
+    const { midnightTemperatures } = weatherArrayInfo;
 
-//FETCH 
+     midnightTemperatures.map( prop => { console.log(prop) } )
+
+    console.log(midnightTemperatures)
+  
+
+//FETCH   
     useEffect( ( ) => {
 
-        
+         
         useGetDataFromApi( pais, useFetchApi )
             .then( ( weatherData ) => { 
                 
 
-                if( weatherData ) { setWeatherArrayInfo( weatherData ); };
+                if( weatherData ) { setWeatherArrayInfo(  { ...weatherData, midnightTemperatures : weatherData.midnightTemperatures } ) };
 
              } );
           
          
         
-
+ 
     }, [ pais, isNewValue ]);  
 
    
@@ -56,6 +61,10 @@ export const ContexProvider = ( { children } ) => {
 
 //CURRENT DATE
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
+
+//MIDNIGHT ARRAY TEMPERATURE
+
+    
     
     
     
