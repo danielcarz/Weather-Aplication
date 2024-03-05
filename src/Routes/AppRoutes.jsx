@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {  Routes, Route, } from "react-router-dom";
 
 //pages
-import { PageOne } from '../Pages/index';
+import { MainPage } from '../Pages/index';
 
 //context
 import { ContexProvider } from '../Components/Hooks/Contex/ProviderContext';
@@ -18,7 +18,7 @@ export const AppRoutes = () => {
         <ContexProvider>
 
             <Routes>
-                <Route path="/" element= { <PageOne></PageOne> }></Route>
+                <Route path="/" element= { <MainPage></MainPage> }></Route>
 
             </Routes>
 
