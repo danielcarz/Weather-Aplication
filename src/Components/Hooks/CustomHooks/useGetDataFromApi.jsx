@@ -32,7 +32,7 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                   const { temp } = main;
                   console.log( 'midnigth', temp );
 
-                  return { midnigh_temp_one : temp, midnigh_temp_two: temp }
+                  return { midnigh_temp : temp }
 
                 } );
                 
