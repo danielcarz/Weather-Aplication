@@ -6,7 +6,7 @@ import { WeatherCard } from "../Components";
 //styles
 import '../Sass/App.scss';
 
-export const PageOne = () => {
+export const MainPage = () => {
 
     return (
         <>

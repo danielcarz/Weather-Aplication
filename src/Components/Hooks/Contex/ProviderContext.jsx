@@ -27,8 +27,8 @@ export const ContexProvider = ( { children } ) => {
     const [weatherArrayInfo, setWeatherArrayInfo] = useState( [ ] );
     console.log(weatherArrayInfo)
 
-//FETCH
- 
+
+//FETCH 
     useEffect( ( ) => {
 
         
@@ -53,14 +53,11 @@ export const ContexProvider = ( { children } ) => {
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
 
+
 //CURRENT DATE
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
-
-    // const getCurrentDate = useGetCurrentDate(  );
-
-
     
-  
+    
     
     return(  
         <Contex.Provider value = { 
