@@ -10,7 +10,7 @@ import React, { useState, useEffect, useContext } from "react";
 export const useGetDataFromApi = ( pais, dataProvider ) => {
 
     return dataProvider( pais )
- 
+  
             .then( data => {
  
                
@@ -22,10 +22,21 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 const { id, name } = city; 
                 
                 const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
-                //console.log( 'list', list );
                 
                 //extract midnight object
                 const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
+                //console.log( 'getmidnight', getMidnightDateObject )
+
+                const getMidnightTemperature = getMidnightDateObject.slice(0, 2).map( date => {
+                  const { main } =  date;
+                  const { temp } = main;
+                  console.log( 'midnigth', temp );
+
+                  return { midnigh_temp_one : temp, midnigh_temp_two: temp }
+
+                } );
+                
+                
                 
                 const { speed } = wind;
                 
@@ -34,14 +45,14 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 const { main: weatherMain, description } = weather[0];
 
                 
-                
+                console.log('midnight', getMidnightTemperature)
 
 
                 
               
    
                 return   { 
-                  id: id, code: cod,
+                    id: id, code: cod,
 
                     nameCity: name,
                   
@@ -60,7 +71,9 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     weatherCondition: weatherMain, 
                     weatherDescription: description,
                     
-                    midnightDate: getMidnightDateObject
+                    midnightDate: getMidnightDateObject,
+                    getMidnightTemperature
+
 
                 }   ; 
                 
