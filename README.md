@@ -20,7 +20,8 @@ Puedes acceder a la aplicacion en [WeatherApp](https://weather-aplication-six.ve
 * Sass
 * Bootstrap
 * Javascript
-* 
+
+
 
 
 

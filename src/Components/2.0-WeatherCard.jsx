@@ -15,8 +15,8 @@ export const WeatherCard = () => {
     
     const { weatherArrayInfo, nextDays } = useContext( Contex );
  
-   
     
+     
  
     //console.log( weatherArrayInfo )  
   

@@ -18,12 +18,14 @@ export const CurrentWeather = () => {
  
 
    return ( 
-        <section className="currentWeatherWrapper">
+        <section className="currentWeatherWrapper"> 
 
             <div>
+ 
+                <h6>  <b> { currentDate } </b>  </h6> 
+
                 <h2 className="currentWeatherTitle"> { weatherArrayInfo.nameCity } </h2>
 
-                {/* <h2> { getCurrentDate } </h2> */}
             
             </div>
  
