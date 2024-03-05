@@ -22,21 +22,22 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 const { id, name } = city; 
                 
                 const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
-                //console.log( 'list', list ); 
+                //console.log( 'list', list );
+                
+                //extract midnight object
+                const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
                 
                 const { speed } = wind;
-                                  
+                
                 const { temp, humidity } = main;
 
                 const { main: weatherMain, description } = weather[0];
-                
-                //extract midnight object
 
-                const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
+                
                 
 
 
-                console.log( 'getMidnightDateObject', getMidnightDateObject );
+                
               
    
                 return   { 
