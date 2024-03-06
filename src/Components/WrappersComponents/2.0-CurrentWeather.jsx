@@ -11,7 +11,7 @@ import '../../Sass/Components/WrappersComponents/CurrentWeather.scss';
 export const CurrentWeather = () => { 
 
     //contex
-    const { weatherArrayInfo, GetCelcius, useGetWeatherImage, imageWeather, currentDate, nextDaysArray, nextDays } = useContext( Contex );
+    const { weatherInformation, GetCelcius, imageStateWeather, currentDate, nextDaysArray, nextDays } = useContext( Contex );
 
     //console.log('weatherArray', weatherArrayInfo )
      
@@ -24,7 +24,7 @@ export const CurrentWeather = () => {
  
                 <h6>  <b> { currentDate } </b>  </h6> 
 
-                <h2 className="currentWeatherTitle"> { weatherArrayInfo.nameCity } </h2>
+                <h2 className="currentWeatherTitle"> { weatherInformation.nameCity } </h2>
 
             
             </div>
@@ -33,7 +33,7 @@ export const CurrentWeather = () => {
 
                 { 
                     
-                    imageWeather && <img src={  imageWeather  } alt="image status weather" ></img>
+                    imageStateWeather && <img src={  imageStateWeather  } alt="image status weather" ></img>
                     
                 } 
 
@@ -42,7 +42,7 @@ export const CurrentWeather = () => {
 
             <section className="currentWeatherInfo">
 
-                <h3 className="weatherCondition" > { weatherArrayInfo.weatherDescription } </h3>
+                <h3 className="weatherCondition" > { weatherInformation.weatherDescription } </h3>
                
                 <h3 className="temperature"> { GetCelcius }º C  </h3>
                
@@ -53,14 +53,14 @@ export const CurrentWeather = () => {
 
                 <div className="pop">
 
-                    <h5>Pop{  weatherArrayInfo.pop } % </h5>
+                    <h5>Pop{  weatherInformation.pop } % </h5>
 
                 </div> 
 
 
                 <div className="wind">
 
-                    <h5>viento {weatherArrayInfo.speedWint}</h5>
+                    <h5>viento {weatherInformation.speedWint}</h5>
 
                 </div>
 

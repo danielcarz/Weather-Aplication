@@ -20,26 +20,26 @@ import snow from '../../../Assets/snow.png';
 
     export const useGetWeatherImage =  ( weatherCondition, weatherDescription ) => {
  
-        let imageWeather;
+        let imageStateWeather;
 
 
         if( weatherCondition  === 'Rain'){
 
             if ( weatherDescription === 'light rain' ) {
 
-                imageWeather = lightRain;
+                imageStateWeather = lightRain;
 
             } else if (  weatherDescription === 'moderate rain' ){
 
-                imageWeather = moderateRain;
+                imageStateWeather = moderateRain;
                  
             } else if (  weatherDescription === 'heavy intensity rain' ){
 
-                imageWeather = thunderstorm;
+                imageStateWeather = thunderstorm;
                 
             } else if (  weatherDescription === 'heavy intensity rain' ){
 
-                imageWeather = thunderstorm;
+                imageStateWeather = thunderstorm;
                 
             }
             
@@ -48,35 +48,35 @@ import snow from '../../../Assets/snow.png';
 
             if( weatherDescription === 'few clouds' ){
 
-                imageWeather = cloudyWithSun;
+                imageStateWeather = cloudyWithSun;
             } else if ( weatherDescription === 'broken clouds' ){
 
-                imageWeather = brokenClouds;
+                imageStateWeather = brokenClouds;
 
             }  else if ( weatherDescription === 'overcast clouds' ){
 
-                imageWeather = fewCloudy;
+                imageStateWeather = fewCloudy;
 
             } else {
 
-                imageWeather = cloudyWithSun;
-                console.log( imageWeather )
+                imageStateWeather = cloudyWithSun;
+                console.log( imageStateWeather )
             }
         } else if (  weatherCondition === 'Thunderstorm'  ){
-            imageWeather = thunderstorm;
+            imageStateWeather = thunderstorm;
         } else if ( weatherCondition === 'Drizzle'  ){
-            imageWeather = drizzle;
+            imageStateWeather = drizzle;
         } else if ( weatherCondition === '	Snow'  ){
-            imageWeather = snow;
+            imageStateWeather = snow;
         }
         
         else {
             // Imagen por defecto si ninguna condición se cumple
-            imageWeather = sun;
+            imageStateWeather = sun;
         }
 
         return {
-            imageWeather
+            imageStateWeather
         };
  
         

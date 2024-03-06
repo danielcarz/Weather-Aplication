@@ -24,9 +24,9 @@ export const ContexProvider = ( { children } ) => {
  
 
 //WEATHER ARRAY INFO 
-    const [weatherArrayInfo, setWeatherArrayInfo] = useState( { midnightTemperatures: [ ] }  );
+    const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ] }  );
 
-    const { midnightTemperatures } = weatherArrayInfo;
+    const { midnightTemperatures } = weatherObjectsInformation;
 
      midnightTemperatures.map( prop => { console.log(prop) } )
 
@@ -41,7 +41,7 @@ export const ContexProvider = ( { children } ) => {
             .then( ( weatherData ) => { 
                 
 
-                if( weatherData ) { setWeatherArrayInfo(  { ...weatherData, midnightTemperatures : weatherData.midnightTemperatures } ) };
+                if( weatherData ) { setWeatherObjectsInformation(  { ...weatherData, midnightTemperatures : weatherData.midnightTemperatures } ) };
 
              } );
           
@@ -52,11 +52,11 @@ export const ContexProvider = ( { children } ) => {
 
    
 //WEATHER IMAGE 
-    const { imageWeather } = useGetWeatherImage( weatherArrayInfo.weatherCondition, weatherArrayInfo.weatherDescription );
+    const {  imageStateWeather } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
 
  
 //WEATHER CELCIUS
-    const GetCelcius = useGetCentigrades( weatherArrayInfo.temperature );
+    const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
 
 
 //CURRENT DATE
@@ -73,7 +73,7 @@ export const ContexProvider = ( { children } ) => {
   
             {   
                //WEATHER ARRAY INFO
-                weatherArrayInfo,
+                weatherInformation: weatherObjectsInformation,
                 GetCelcius, 
 
                 //forms
@@ -83,7 +83,7 @@ export const ContexProvider = ( { children } ) => {
 
                 //weather image
                 useGetWeatherImage,
-                imageWeather,
+                imageStateWeather,
 
                 //current date
                 currentDate,
