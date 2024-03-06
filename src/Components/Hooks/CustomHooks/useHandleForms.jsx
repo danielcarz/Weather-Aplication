@@ -6,10 +6,8 @@ import React, { useState } from "react";
 
         const [inputValue, setInputValue] = useState('');
 
-        const [pais, setPais] = useState( 'colombia' );
+        const [countries, setCountries] = useState( 'colombia' );
     
-        //const apiKey = '389f893e1c972644360ed8df4b834963'; // Coloca tu API key aquí
-
         const [ isNewValue, setIsNewValue ] = useState( false )
     
     
@@ -26,7 +24,7 @@ import React, { useState } from "react";
             
             event.preventDefault();
             
-            setPais(inputValue); 
+            setCountries(inputValue); 
 
             setIsNewValue( !isNewValue );
     
@@ -37,7 +35,7 @@ import React, { useState } from "react";
 
             inputValue,
 
-            pais,
+            pais: countries,
 
             handleInputChange,
 
