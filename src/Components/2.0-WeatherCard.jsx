@@ -13,13 +13,32 @@ import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWe
 export const WeatherCard = () => {
 
     
-    const { weatherArrayInfo, nextDays } = useContext( Contex );
+    const { nextDays, midnightTemperatures } = useContext( Contex );
+    
+    const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnightTemperatures ] );
+    const [ weatherInfo, setWeatherInfo ] = useState( [ ] )
+    
+    useEffect(() => {
+
+        const nuevosObjetos = nextDays.flatMap((item, index) => ({
+
+            day: item.valueDay,
+            temperature: midnightTemperatures[index] // Assuming midnightTemperatures is an array
+        
+        }));
+
+        setWeatherInfo( nuevosObjetos );
+
+    }, [nextDays, midnightTemperatures]);
+
+   
+
  
     
-     
+      
  
-    //console.log( weatherArrayInfo )  
-  
+    //console.log( weatherArrayInfo )   valueTemperature = {item.temperature} 
+    console.log( weatherInfo[0].temperature.midnigh_temp ) 
     
     
      
@@ -27,14 +46,14 @@ export const WeatherCard = () => {
         <>
             <FormCountry></FormCountry>
             <CurrentWeather></CurrentWeather>
-
-
+ 
+ 
             <ParentPredictionWeatherState>
 
                 { 
                     
-                    nextDays.map( ( item, index ) => ( 
-                        <PredictionWeatherState key={index} valueDay={item.valueDay}> </PredictionWeatherState> 
+                    weatherInfo.map( ( item, index ) => ( 
+                        <PredictionWeatherState key={index} valueDay={item.day} valueTemperature={ weatherInfo[index].temperature.midnigh_temp } >  </PredictionWeatherState> 
                 
                     ))
                 }

@@ -12,7 +12,7 @@
         const response = await fetch( url );
         const data = await response.json();
         
-        console.log( 'fetchapi', data );
+        //console.log( 'fetchapi', data );
         
         return data; 
     };

@@ -26,11 +26,7 @@ export const ContexProvider = ( { children } ) => {
 //WEATHER ARRAY INFO 
     const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ] }  );
 
-    const { midnightTemperatures } = weatherObjectsInformation;
-
-     midnightTemperatures.map( prop => { console.log(prop) } )
-
-    console.log(midnightTemperatures)
+    
   
 
 //FETCH   
@@ -63,6 +59,8 @@ export const ContexProvider = ( { children } ) => {
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
 
 //MIDNIGHT ARRAY TEMPERATURE
+   
+    const { midnightTemperatures } = weatherObjectsInformation;
 
     
     
@@ -88,7 +86,10 @@ export const ContexProvider = ( { children } ) => {
                 //current date
                 currentDate,
                 nextDaysArray,
-                nextDays
+                nextDays,
+
+                //midnight temperatures
+                midnightTemperatures,
                   
             }
             
