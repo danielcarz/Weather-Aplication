@@ -20,50 +20,64 @@ export const ContexProvider = ( { children } ) => {
 
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
+
+
     //console.log( isNewValue );
- 
-
-//WEATHER ARRAY INFO 
-    const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ] }  );
-
     
-  
-
 //FETCH   
     useEffect( ( ) => {
 
-         
+            
         useGetDataFromApi( pais, useFetchApi )
             .then( ( weatherData ) => { 
                 
 
                 if( weatherData ) { setWeatherObjectsInformation(  { ...weatherData, midnightTemperatures : weatherData.midnightTemperatures } ) };
 
-             } );
-          
-         
+                } );
+            
+            
         
- 
+    
     }, [ pais, isNewValue ]);  
 
-   
+        
+    
+//WEATHER ARRAY INFO 
+        const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
+        
+        
 //WEATHER IMAGE 
     const {  imageStateWeather } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
 
  
+
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
 
+    
 
 //CURRENT DATE
+
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
 
-//MIDNIGHT ARRAY TEMPERATURE
-   
-    const { midnightTemperatures } = weatherObjectsInformation;
 
+        
+//MIDNIGHT ARRAY TEMPERATURE
     
+    const { midnightTemperatures, midnightDates } = weatherObjectsInformation;
+
+    const midnightWeather =  midnightDates.map( item => item.weather );
+    const combinedWeather = midnightWeather.flat();
+
+    const maidNightStatus =  combinedWeather.map( item => item.main );
     
+
+   
+ 
+    
+ 
+   
     
     
     return(  
@@ -88,9 +102,12 @@ export const ContexProvider = ( { children } ) => {
                 nextDaysArray,
                 nextDays,
 
+                
                 //midnight temperatures
                 midnightTemperatures,
-                  
+                maidNightStatus
+                
+
             }
             
             
