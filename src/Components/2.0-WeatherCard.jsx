@@ -38,7 +38,7 @@ export const WeatherCard = () => {
       
  
     //console.log( weatherArrayInfo )   valueTemperature = {item.temperature} 
-    console.log( weatherInfo[0].temperature.midnigh_temp ) 
+    //console.log( weatherInfo[0].temperature.midnigh_temp ) 
     
     
      
@@ -53,7 +53,7 @@ export const WeatherCard = () => {
                 { 
                     
                     weatherInfo.map( ( item, index ) => ( 
-                        <PredictionWeatherState key={index} valueDay={item.day} valueTemperature={ weatherInfo[index].temperature.midnigh_temp } >  </PredictionWeatherState> 
+                        <PredictionWeatherState key={index} valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
                 
                     ))
                 }
