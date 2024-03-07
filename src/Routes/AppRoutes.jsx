@@ -6,7 +6,7 @@ import {  Routes, Route, } from "react-router-dom";
 import { MainPage } from '../Pages/index';
 
 //context
-import { ContexProvider } from '../Components/Hooks/Contex/ProviderContext';
+import { ContexProvider } from '../Components/Hooks/Contex/ProviderContext'; 
 
 
 export const AppRoutes = () => {
@@ -15,7 +15,7 @@ export const AppRoutes = () => {
 
     return (  
       
-        <ContexProvider>
+        <ContexProvider> 
 
             <Routes>
                 <Route path="/" element= { <MainPage></MainPage> }></Route>

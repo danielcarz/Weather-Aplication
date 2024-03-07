@@ -7,7 +7,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/PredictionWeatherState.scss';
 
-export const PredictionWeatherState = ( { valueDay, valueTemperature } ) => {
+export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherStatus } ) => {
 
     //contex
     const { weatherArrayInfo, nextDays } = useContext( Contex ); 
@@ -22,7 +22,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature } ) => {
                     { valueDay } 
                    
  
-                    <p>State weather</p>
+                    <p>State weather: { weatherStatus } </p>
                     
                 
 
