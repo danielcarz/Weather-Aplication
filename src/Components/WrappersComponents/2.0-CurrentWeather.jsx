@@ -12,10 +12,7 @@ export const CurrentWeather = () => {
 
     //contex
     const { weatherInformation, GetCelcius, imageStateWeather, currentDate } = useContext( Contex );
-
-    //console.log('weatherArray', imageStateWeather )
-     
- 
+      
 
    return ( 
         <section className="currentWeatherWrapper"> 
@@ -53,14 +50,14 @@ export const CurrentWeather = () => {
 
                 <div className="pop">
 
-                    <h5>Pop{  weatherInformation.pop } % </h5>
+                    <h5>Pop: {  weatherInformation.pop } % </h5>
 
                 </div> 
 
 
                 <div className="wind">
 
-                    <h5>viento {weatherInformation.speedWint}</h5>
+                    <h5>viento: {weatherInformation.speedWint}</h5>
 
                 </div>
 

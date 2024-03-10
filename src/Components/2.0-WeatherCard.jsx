@@ -23,7 +23,7 @@ export const WeatherCard = () => {
         const midnight_objectInfo = nextDays.flatMap((item, index) => ({
 
             day: item.valueDay,
-            temperature: midnight_celcius[index], // Assuming midnightTemperatures is an array
+            temperature: midnight_celcius[index], 
             status: maidNightStatus[index],
             image: maidnight_images[ index ]
 
@@ -33,7 +33,7 @@ export const WeatherCard = () => {
 
     }, [nextDays, midnight_celcius]);
 
-   console.log( weatherInfo )
+
  
      
    return ( 
