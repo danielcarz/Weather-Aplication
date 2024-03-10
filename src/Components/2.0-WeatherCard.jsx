@@ -25,7 +25,7 @@ export const WeatherCard = () => {
             day: item.valueDay,
             temperature: midnightTemperatures[index], // Assuming midnightTemperatures is an array
             status: maidNightStatus[index],
-            image: maidnight_images[ index ].imageStateWeather 
+            image: maidnight_images[ index ]
 
         })); 
 
@@ -34,7 +34,7 @@ export const WeatherCard = () => {
     }, [nextDays, midnightTemperatures]);
 
    
-    console.log( weatherInfo )
+
      
    return ( 
         <>
@@ -47,7 +47,7 @@ export const WeatherCard = () => {
                 { 
                     
                     weatherInfo.map( ( item, index ) => ( 
-                        <PredictionWeatherState key={index} weatherImage = { weatherInfo[index].image } weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
+                        <PredictionWeatherState key={index} weatherImage = { weatherInfo[index].image ? weatherInfo[index].image.imageStateWeather : ''} weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
                 
                     )) 
                 }

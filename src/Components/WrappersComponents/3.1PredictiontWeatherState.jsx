@@ -17,7 +17,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
 
             <section className="PredictionInfoStateWrapper">
 
-                <div>
+                <div >
                     { valueDay } 
                     
  
@@ -28,7 +28,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
                 </div>
 
                 <figure> 
-                    <img src={ weatherImage } alt="weather image"></img>
+                    {  weatherImage &&  <img src={ weatherImage } alt="weather image"></img> }
                 </figure>
 
                 <div>
