@@ -98,7 +98,7 @@ export const ContexProvider = ( { children } ) => {
 
                 //weather image
                 useGetWeatherImage,
-                imageStateWeather,
+                imageStateWeather, 
 
                 //current date
                 currentDate,
