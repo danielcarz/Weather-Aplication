@@ -11,32 +11,17 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
 
     return dataProvider( pais )
   
-            .then( data => {
+            .then( data => { 
  
                
- 
+
+//CURRENT DATES
+
                 const [ { cod, city, list } ] = [ data ];
-                
-                
-                //extracting weather info
+                                
                 const { id, name } = city; 
                 
                 const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
-                
-                //extract midnight object
-                const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
-                //console.log( 'getmidnight', getMidnightDateObject )
-
-                const midnightTemperatures = getMidnightDateObject.slice(0, 2).map( date => {
-                  const { main } =  date;
-                  const { temp } = main;
-                  //console.log( 'midnigth', temp );
-
-                  return { midnigh_temp : temp }
-
-                } );
-                
-                
                 
                 const { speed } = wind;
                 
@@ -44,32 +29,56 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
 
                 const { main: weatherMain, description } = weather[0];
 
-                
-                //console.log('midnight', midnightTemperatures)
 
 
+//MIDNIGHT DATES
+               
                 
-              
-   
-                return   { 
-                    id: id, code: cod,
+                const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
+                
+
+                const midnightTemperatures = getMidnightDateObject.slice(0, 2).map( date => {
+
+                  const { main } =  date;
+                  const { temp } = main;
+
+                  const midnight_ValueMainProperty = date.weather[0].main
+                  const midnight_ValueDescriptionProperty = date.weather[0].description
+
+                  
+                  return { 
+                    
+                    midnigh_temp : temp, 
+                    midnight_main: midnight_ValueMainProperty,
+                    midnight_description: midnight_ValueDescriptionProperty, 
+                 
+                  }
+                  
+                } );
+                
+                
+
+                return   {
+                  
+                  //CURRENT DATES
+                    id: id, 
+                    code: cod,
 
                     nameCity: name,
                   
                     date: dt_txt,
 
                     temperature: temp, 
-
                     humi: humidity, 
-
                     speedWint: speed,
-
                     rain: rain,
                     pop: pop,
 
                     conditionsInfo: weather,
                     weatherCondition: weatherMain, 
                     weatherDescription: description,
+
+                    //MIDNIGHT DATES
                     
                     midnightDates: getMidnightDateObject,
                     midnightTemperatures: midnightTemperatures

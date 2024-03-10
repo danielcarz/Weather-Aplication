@@ -13,35 +13,28 @@ import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWe
 export const WeatherCard = () => {
 
     
-    const { nextDays, midnightTemperatures, maidNightStatus } = useContext( Contex );
+    const { nextDays, midnightTemperatures, maidNightStatus, maidnight_images } = useContext( Contex );
     
     const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnightTemperatures ] );
     const [ weatherInfo, setWeatherInfo ] = useState( [ ] )
     
     useEffect(() => {
 
-        const nuevosObjetos = nextDays.flatMap((item, index) => ({
+        const midnight_objectInfo = nextDays.flatMap((item, index) => ({
 
             day: item.valueDay,
             temperature: midnightTemperatures[index], // Assuming midnightTemperatures is an array
             status: maidNightStatus[index],
+            image: maidnight_images[ index ].imageStateWeather 
 
-        }));
+        })); 
 
-        setWeatherInfo( nuevosObjetos );
+        setWeatherInfo( midnight_objectInfo );
 
     }, [nextDays, midnightTemperatures]);
 
    
-
- 
-    
-      
- 
-    //console.log( weatherArrayInfo )   valueTemperature = {item.temperature} 
-    //console.log( weatherInfo[0].temperature.midnigh_temp ) 
-    
-    
+    console.log( weatherInfo )
      
    return ( 
         <>
@@ -54,9 +47,9 @@ export const WeatherCard = () => {
                 { 
                     
                     weatherInfo.map( ( item, index ) => ( 
-                        <PredictionWeatherState key={index} weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
+                        <PredictionWeatherState key={index} weatherImage = { weatherInfo[index].image } weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
                 
-                    ))
+                    )) 
                 }
 
 

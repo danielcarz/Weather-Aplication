@@ -7,11 +7,10 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/PredictionWeatherState.scss';
 
-export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherStatus } ) => {
+export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherStatus, weatherImage } ) => {
 
-    //contex
-    const { weatherArrayInfo, nextDays } = useContext( Contex ); 
-    console.log('weather array info', valueTemperature); 
+   
+    console.log('weather array info', weatherImage); 
 
     return (
         <section className="predictionWeatherWrapper">
@@ -20,7 +19,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
 
                 <div>
                     { valueDay } 
-                   
+                    
  
                     <p>State weather: { weatherStatus } </p>
                     
@@ -29,7 +28,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
                 </div>
 
                 <figure> 
-                    <img alt="weather image"></img>
+                    <img src={ weatherImage } alt="weather image"></img>
                 </figure>
 
                 <div>

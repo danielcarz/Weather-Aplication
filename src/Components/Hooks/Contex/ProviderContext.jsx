@@ -16,7 +16,13 @@ import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades, us
 
  
 export const ContexProvider = ( { children } ) => {
- 
+    
+    
+//WEATHER ARRAY INFO 
+    const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
+    console.log( weatherObjectsInformation )
+        
+
 
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
@@ -42,15 +48,12 @@ export const ContexProvider = ( { children } ) => {
     }, [ pais, isNewValue ]);  
 
         
-    
-//WEATHER ARRAY INFO 
-        const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
-        
-        
 //WEATHER IMAGE 
     const {  imageStateWeather } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
+    console.log( weatherObjectsInformation.midnightTemperatures )
 
- 
+    const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
+    console.log( maidnight_images )
 
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
@@ -105,7 +108,8 @@ export const ContexProvider = ( { children } ) => {
                 
                 //midnight temperatures
                 midnightTemperatures,
-                maidNightStatus
+                maidNightStatus,
+                maidnight_images, 
                 
 
             }
