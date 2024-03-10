@@ -20,7 +20,7 @@ export const ContexProvider = ( { children } ) => {
     
 //WEATHER ARRAY INFO 
     const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
-    console.log( weatherObjectsInformation )
+    //console.log( weatherObjectsInformation )
         
 
 
@@ -55,28 +55,32 @@ export const ContexProvider = ( { children } ) => {
     const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
     console.log( maidnight_images )
 
-//WEATHER CELCIUS
-    const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
-
     
-
-//CURRENT DATE
-
+    //CURRENT DATE
+    
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
-
-
-        
-//MIDNIGHT ARRAY TEMPERATURE
+    
+    
+    
+    //MIDNIGHT ARRAY TEMPERATURE
     
     const { midnightTemperatures, midnightDates } = weatherObjectsInformation;
 
     const midnightWeather =  midnightDates.map( item => item.weather );
     const combinedWeather = midnightWeather.flat();
-
     const maidNightStatus =  combinedWeather.map( item => item.main );
-    
 
-   
+    
+    
+    //WEATHER CELCIUS
+    const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
+    const midnight_celcius = weatherObjectsInformation.midnightTemperatures.map( item => useGetCentigrades( item.midnigh_temp )  )
+    //console.log( midnight_celcius )
+
+    
+    
+        
+    
  
     
  
@@ -109,7 +113,8 @@ export const ContexProvider = ( { children } ) => {
                 //midnight temperatures
                 midnightTemperatures,
                 maidNightStatus,
-                maidnight_images, 
+                maidnight_images,
+                midnight_celcius 
                 
 
             }

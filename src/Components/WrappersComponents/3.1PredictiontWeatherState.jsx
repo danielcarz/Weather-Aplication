@@ -32,7 +32,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
                 </figure>
 
                 <div>
-                    { valueTemperature }  
+                   temperatura: { valueTemperature }  º C
                 </div>
 
 

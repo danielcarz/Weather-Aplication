@@ -12,10 +12,10 @@ import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWe
 
 export const WeatherCard = () => {
 
+    //midnightTemperatures:
+    const { nextDays,  midnight_celcius, maidNightStatus, maidnight_images } = useContext( Contex );
     
-    const { nextDays, midnightTemperatures, maidNightStatus, maidnight_images } = useContext( Contex );
-    
-    const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnightTemperatures ] );
+    const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnight_celcius ] );
     const [ weatherInfo, setWeatherInfo ] = useState( [ ] )
     
     useEffect(() => {
@@ -23,7 +23,7 @@ export const WeatherCard = () => {
         const midnight_objectInfo = nextDays.flatMap((item, index) => ({
 
             day: item.valueDay,
-            temperature: midnightTemperatures[index], // Assuming midnightTemperatures is an array
+            temperature: midnight_celcius[index], // Assuming midnightTemperatures is an array
             status: maidNightStatus[index],
             image: maidnight_images[ index ]
 
@@ -31,10 +31,10 @@ export const WeatherCard = () => {
 
         setWeatherInfo( midnight_objectInfo );
 
-    }, [nextDays, midnightTemperatures]);
+    }, [nextDays, midnight_celcius]);
 
-   
-
+   console.log( weatherInfo )
+ 
      
    return ( 
         <>
@@ -47,7 +47,7 @@ export const WeatherCard = () => {
                 { 
                     
                     weatherInfo.map( ( item, index ) => ( 
-                        <PredictionWeatherState key={index} weatherImage = { weatherInfo[index].image ? weatherInfo[index].image.imageStateWeather : ''} weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature.midnigh_temp : ''} >  </PredictionWeatherState> 
+                        <PredictionWeatherState key={index} weatherImage = { weatherInfo[index].image ? weatherInfo[index].image.imageStateWeather : ''} weatherStatus = { weatherInfo[index].status }  valueDay={item.day} valueTemperature={ weatherInfo[index].temperature ?  weatherInfo[index].temperature : ''} >  </PredictionWeatherState> 
                 
                     )) 
                 }
