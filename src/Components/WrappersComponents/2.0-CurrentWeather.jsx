@@ -17,7 +17,7 @@ export const CurrentWeather = () => {
    return ( 
         <section className="currentWeatherWrapper"> 
 
-            <div>
+            <div className="currentWeatherDateInfo">
  
                 <h6>  <b> { currentDate } </b>  </h6> 
 
