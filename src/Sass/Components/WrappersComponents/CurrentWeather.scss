@@ -168,6 +168,7 @@
     padding: 20px;
 
     display: flex;
+    
     justify-content: center;
     align-items: center;
 
@@ -181,6 +182,8 @@
       
       width: 500px;
 
+      
+
       position: relative;
       top: -30%;
       
@@ -190,7 +193,7 @@
 
         b{
 
-          font-size: 18px; /* Adjust the font size as needed */
+          font-size: 18px; 
 
         }
 
@@ -208,7 +211,8 @@
       width: 30%;
       height: 150px;
 
-      margin: auto;
+      display: flex;
+      justify-content: center;
 
       position: relative;
       left: 10%;
@@ -218,9 +222,9 @@
       border: 1px solid blue; 
 
       img{
+
         width: auto; 
         height: 100%;
-
         
       }
 
@@ -234,6 +238,7 @@
 
 
       display: flex;
+      justify-content: space-around;
 
       position: relative;
       left: -45%;
