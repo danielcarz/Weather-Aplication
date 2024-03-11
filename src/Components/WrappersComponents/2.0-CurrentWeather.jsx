@@ -48,7 +48,7 @@ export const CurrentWeather = () => {
 
             <section className="currentWeatherfeatures">
 
-                <div className="pop">
+                <div className="pop"> 
 
                     <h5>Pop: {  weatherInformation.pop } % </h5>
 
