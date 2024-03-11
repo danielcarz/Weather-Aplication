@@ -6,7 +6,7 @@ import React from "react";
         const fecha = new Date();
         const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-        const currentDate =  fecha.toLocaleDateString('es-ES', opciones);
+        const currentDate =  fecha.toLocaleDateString( 'en-US', opciones );
 
         const nextDateOne = new Date ( fecha )
         nextDateOne.setDate( fecha.getDate() + 1 );
@@ -16,8 +16,11 @@ import React from "react";
 
         const nextDaysArray = [
              
-            nextDateOne.toLocaleDateString( 'es-ES', opciones),
-            nextDateTwo.toLocaleDateString( 'es-ES', opciones),
+            //nextDateOne.toLocaleDateString( 'es-ES', opciones),
+            //nextDateTwo.toLocaleDateString( 'es-ES', opciones),
+
+            nextDateOne.toLocaleDateString('en-US', opciones),
+            nextDateTwo.toLocaleDateString('en-US', opciones)
 
         ];
 

@@ -21,7 +21,7 @@ export const FormCountry = () => {
             <input
 
                 type="text"
-                placeholder=" Clima en tu ciudad o pais " 
+                placeholder=" Weather in your city or country " 
                 value={inputValue}
 
                 onChange={handleInputChange}

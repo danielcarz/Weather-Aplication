@@ -57,7 +57,7 @@ export const CurrentWeather = () => {
 
                 <div className="wind">
 
-                    <h5>viento: {weatherInformation.speedWint}</h5>
+                    <h5>Wint: {weatherInformation.speedWint}</h5>
 
                 </div>
 
