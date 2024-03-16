@@ -22,16 +22,20 @@
   }
   
   @mixin styles_desktop () {
+
     width: 100%;
+    height: 100vh;
     
-    color: red;
+    padding: 20px; 
+
     border: 1px solid red;
+    background-color: rgb(6, 120, 214);
   }
   
+   
   
   
-  
-  .Pageone{
+  .appContainer{
     
   
     @include media-query($media_phone){

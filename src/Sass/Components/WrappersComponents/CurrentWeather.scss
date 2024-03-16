@@ -162,69 +162,33 @@
   
   @mixin styles_desktop () {
     
-    width: 100%;
-    height: 60vh; 
+    width: 20%; 
+    height: 55vh;   
     
     padding: 20px;
+    margin-top: 10px;  
 
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
       
-    color: black;
-
     border: 1px solid rgb(139, 238, 9);
+    border-radius: 15px;
 
-    .currentWeatherDateInfo{
-      
-      width: 500px;
-
-      
-
-      position: relative;
-      top: -30%;
-      
-      border: 1px solid rgb(98, 238, 5);
-
-      h6{
-
-        b{
-
-          font-size: 18px; 
-
-        }
-
-
-      }
-
-      .currentWeatherTitle{
-        font-size: 30px;
-      }
-      
-    }
-
+    background-color: red;
+    
     .currentWeatherImage{
 
-      width: 30%;
-      height: 150px;
+      width: 100%; 
+      height: 100px;
 
-      display: flex;
-      justify-content: center;
-
-      position: relative;
-      left: 10%;
-      top: -20%;  
-
+      
 
       border: 1px solid blue; 
 
-      img{
+      .imageWeather{
 
-        width: auto; 
-        height: 100%;
+        width: 50%;    
+        height: 100px;
+        
+        border: 1px solid blue;
         
       }
 
@@ -232,34 +196,59 @@
 
     .currentWeatherInfo{
       
-      width: 500px;
-      text-align: center;
-      font-size: 18px;     
+      width: 100%; 
+      
+           
 
 
       display: flex;
       justify-content: space-around;
 
-      position: relative;
-      left: -45%;
-      top: 30%;
+      
 
-      border: 1px solid rgb(245, 5, 5);
+     
 
       color: black;
 
       .weatherCondition{
 
-        
+        font-size: 15px;
 
       };
 
       .temperature{
-
+        font-size: 15px;
        
       }
 
+    } 
+
+    .currentWeatherDateInfo{
+      
+      width: 100%;
+      height: 50px;
+      
+      border: 1px solid rgb(98, 238, 5);
+
+      h6{
+
+        b{
+
+          font-size: 15px; 
+
+        }
+
+
+      }
+
+      .currentWeatherTitle{
+        font-size: 15px;
+      }
+      
     }
+
+
+   
 
     .currentWeatherfeatures{
 

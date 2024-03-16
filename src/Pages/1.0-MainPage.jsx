@@ -9,15 +9,10 @@ import '../Sass/App.scss';
 export const MainPage = () => {
 
     return (
-        <>
-         
+        <div className="appContainer">
 
-          
- 
           <WeatherCard></WeatherCard> 
- 
-         
-           
-        </>
+        
+        </div>
       );
 }
