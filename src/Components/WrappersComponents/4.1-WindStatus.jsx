@@ -3,14 +3,11 @@ import React, { useState, useEffect, useContext } from "react";
 //context
 import { Contex } from '../Hooks/Contex/CreateContext';
 
-//childs
-import { WindStatus } from './4.1-WindStatus';
-
 
 //styles
 
 
-export const WindStatusWrapper = () => {
+export const WindStatus = () => {
 
     
     
@@ -20,7 +17,7 @@ export const WindStatusWrapper = () => {
      
     return (
        <div>
-            <WindStatus></WindStatus>
+            <h1>wind satus Compr</h1>
        </div>
     );  
 

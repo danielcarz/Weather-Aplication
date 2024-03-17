@@ -27,8 +27,22 @@
     height: 63vh;
 
     margin-left: 30px;
+    padding: 10px;
     
-   border: 1px solid red;
+    border: 1px solid red;
+
+    display: flex;
+    justify-content: center;
+
+    .todayHighLight{
+
+        width: 50%;
+
+       
+
+        border: 1px solid red;  
+    }
+    
 
   }
   

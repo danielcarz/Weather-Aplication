@@ -10,13 +10,14 @@ import '../Sass/Components/WrappersComponents/TodayHightLight.scss'
 export const TodayHightLight = () => {
 
     return (
+
         <div className="todayHighLightContainer">
 
-                <section className="windStatusWrapper" > <WindStatusWrapper></WindStatusWrapper> </section>
+                <section className="todayHighLight windStatusWrapper" > <WindStatusWrapper></WindStatusWrapper> </section>
 
-                <section className="uvIndexWrapper"> <UvIndexWrapper></UvIndexWrapper> </section>
+                <section className="todayHighLight uvIndexWrapper"> <UvIndexWrapper></UvIndexWrapper> </section>
  
-                <section className="sunRiseWrapper"> <SunriseWrapper></SunriseWrapper> </section>
+                <section className="todayHighLight sunRiseWrapper"> <SunriseWrapper></SunriseWrapper> </section>
         </div>
       );
 }

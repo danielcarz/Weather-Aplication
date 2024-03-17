@@ -19,3 +19,4 @@ export * from './6.0-SunriseWrapper';
  
 //windStatusWrapper
 export * from './4.0-WindStatusWrapper';
+export * from './4.1-WindStatus';
