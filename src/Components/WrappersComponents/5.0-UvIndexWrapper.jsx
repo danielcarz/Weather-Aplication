@@ -7,7 +7,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 
 
-export const WindStatusWrapper = () => {
+export const UvIndexWrapper = () => {
 
     
     
@@ -17,7 +17,7 @@ export const WindStatusWrapper = () => {
      
     return (
        <div>
-            <h1>wind satus</h1>
+            <h1> FormCountry </h1>
        </div>
     );  
 

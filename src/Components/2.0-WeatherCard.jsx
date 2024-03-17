@@ -9,7 +9,7 @@ import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWe
  
 //styles
 //import '.'
-
+ 
 export const WeatherCard = () => {
 
     //midnightTemperatures:
@@ -41,8 +41,8 @@ export const WeatherCard = () => {
 
             <FormCountry></FormCountry>
 
-            <CurrentWeather></CurrentWeather>
- 
+            <CurrentWeather></CurrentWeather> 
+   
  
            {/*  <ParentPredictionWeatherState>
 

@@ -8,7 +8,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 export const FormCountry = () => {
-
+ 
     
     const { inputValue, handleInputChange, handleSubmit } = useContext( Contex );
 
@@ -27,7 +27,7 @@ export const FormCountry = () => {
                 onChange={handleInputChange}
               
             />
-          
+           
              
         </form>
     );  
