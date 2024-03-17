@@ -8,7 +8,7 @@ import { FormCountry, CurrentWeather, ParentPredictionWeatherState, PredictionWe
 
  
 //styles
-
+//import '.'
 
 export const WeatherCard = () => {
 
@@ -37,7 +37,8 @@ export const WeatherCard = () => {
  
      
    return ( 
-        <>
+        <div className="currentWrapperContainer">
+
             <FormCountry></FormCountry>
 
             <CurrentWeather></CurrentWeather>
@@ -59,7 +60,7 @@ export const WeatherCard = () => {
             
           
         
-        </>
+        </div>
 ); 
 
     

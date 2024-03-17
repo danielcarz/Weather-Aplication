@@ -9,4 +9,7 @@ export * from './2.0-CurrentWeather';
 export * from './3.0-ParentPredictionWeatherState';
 
 //Past weather Components
-export * from './3.1PredictiontWeatherState';  
+export * from './3.1PredictiontWeatherState'; 
+
+//windStatusWrapper
+export * from './4.0-WindStatusWrapper';
