@@ -1,17 +1,17 @@
 import React from "react";
 
 //Wrappers components
-import { WindStatusWrapper, UvIndexWrapper, SunriseWrapper, UvIndex } from './WrappersComponents/index.js';
+import { WindStatusWrapper, UvIndexWrapper, SunriseWrapper } from './WrappersComponents/index.js';
 
   
 //styles
-import '../Sass/Components/WrappersComponents/TodayHightLight.scss'
+import '../Sass/Components/WrappersComponents/3.0-TodayHightLight.scss'
 
 export const TodayHightLight = () => {
 
     return (
 
-        <div className="todayHighLightContainer" > 
+        <div className="todayHighLightContainer" >  
             
             <h3> Today's HighLight </h3>
 
@@ -19,12 +19,14 @@ export const TodayHightLight = () => {
 
                 <section className="todayHighLight windStatusWrapper" > <WindStatusWrapper></WindStatusWrapper> </section>
 
-                <section className="todayHighLight uvIndexWrapper"> <UvIndexWrapper></UvIndexWrapper> </section>
+                <section className="todayHighLight uvIndexWrapper"> <UvIndexWrapper></UvIndexWrapper>  </section>
 
-                <section className="todayHighLight sunRiseWrapper"> <SunriseWrapper></SunriseWrapper> </section>
+                 <section className="todayHighLight uvIndexWrapper"> <SunriseWrapper></SunriseWrapper> </section>   
+
+               
             
             </section>
-
+ 
         </div>
 
        

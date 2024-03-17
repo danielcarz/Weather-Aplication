@@ -21,7 +21,8 @@ export const SunriseWrapper = () => {
 
             <Sunrise></Sunrise>
             
-            <FeelsLike></FeelsLike>
+            <FeelsLike></FeelsLike> 
+            
        </div>
     );  
 

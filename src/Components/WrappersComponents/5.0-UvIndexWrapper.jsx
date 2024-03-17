@@ -13,13 +13,9 @@ import '../../Sass/Components/WrappersComponents/5.0-UvIndexWrapper.scss';
 
 export const UvIndexWrapper = () => {
 
-    
-    
 
-   
-
-     
     return (
+            
        <div className="uvIndexContainer">
 
             <UvIndex></UvIndex>
