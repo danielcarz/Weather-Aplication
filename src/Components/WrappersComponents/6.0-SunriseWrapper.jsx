@@ -10,18 +10,15 @@ import { FeelsLike } from "./6.2-FeelsLike";
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/6.0-sunriseWrapper.scss';
 
 export const SunriseWrapper = () => {
 
-    
-    
-
-   
 
      
     return (
-       <div>
+       <div className="sunriseContainer" >
+
             <Sunrise></Sunrise>
             
             <FeelsLike></FeelsLike>

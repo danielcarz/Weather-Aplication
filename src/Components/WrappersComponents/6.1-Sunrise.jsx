@@ -6,6 +6,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
+import '../../Sass/Components/WrappersComponents/6.1-sunrise.scss';
 
 
 export const Sunrise = () => {
@@ -17,7 +18,8 @@ export const Sunrise = () => {
 
      
     return (
-       <div>
+       <div className="sunriseWrapper" >
+
             <h1> Sunrise </h1>
        </div>
     );  
