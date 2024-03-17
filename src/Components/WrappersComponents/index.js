@@ -13,6 +13,9 @@ export * from './3.1PredictiontWeatherState';
 
 //UvIndex Wrapper
 export * from './5.0-UvIndexWrapper';
+
+//Sunrise wrapper
+export * from './6.0-SunriseWrapper';
  
 //windStatusWrapper
 export * from './4.0-WindStatusWrapper';

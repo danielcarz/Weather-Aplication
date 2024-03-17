@@ -1,7 +1,7 @@
 import React from "react";
 
 //Wrappers components
-import { FormCountry as WindStatusWrapper, UvIndexWrapper } from './WrappersComponents/index.js';
+import { WindStatusWrapper, UvIndexWrapper, SunriseWrapper } from './WrappersComponents/index.js';
 
   
 //styles
@@ -16,7 +16,7 @@ export const TodayHightLight = () => {
 
                 <section className="uvIndexWrapper"> <UvIndexWrapper></UvIndexWrapper> </section>
  
-                <section className="sunRiseWrapper"></section>
+                <section className="sunRiseWrapper"> <SunriseWrapper></SunriseWrapper> </section>
         </div>
       );
 }
