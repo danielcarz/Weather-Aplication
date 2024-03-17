@@ -13,6 +13,7 @@ export * from './3.1PredictiontWeatherState';
 
 //UvIndex Wrapper
 export * from './5.0-UvIndexWrapper';
+export * from './5.1-UvIndex';
 
 //Sunrise wrapper
 export * from './6.0-SunriseWrapper';
