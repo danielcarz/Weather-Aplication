@@ -5,7 +5,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-import '../../Sass/Components/WrappersComponents/WindStatus.scss';
+import '../../Sass/Components/WrappersComponents/4.1-WindStatus.scss';
 
 export const WindStatus = ( { speedWint, currentDate } ) => {
 
@@ -13,7 +13,7 @@ export const WindStatus = ( { speedWint, currentDate } ) => {
     return (
        <div className="windStatusWrapper" > 
 
-            <h1>wind satus </h1>
+            <h1>wind status </h1>
 
             <p> { speedWint } </p>
 

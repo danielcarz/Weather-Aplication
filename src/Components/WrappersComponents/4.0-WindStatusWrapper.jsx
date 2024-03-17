@@ -8,7 +8,7 @@ import { WindStatus } from './4.1-WindStatus';
 import { Humidity  } from './4.2-Humidity';
 
 //styles
-import '../../Sass/Components/WrappersComponents/WindStatusWrapper.scss';
+import '../../Sass/Components/WrappersComponents/4.0-WindStatusWrapper.scss';
 
 export const WindStatusWrapper = () => {
 
