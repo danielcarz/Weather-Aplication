@@ -5,9 +5,9 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
+import '../../Sass/Components/WrappersComponents/Humidity.scss'
 
-
-export const Humidity = () => {
+export const Humidity = ( { humidity } ) => {
 
     
     
@@ -16,8 +16,10 @@ export const Humidity = () => {
 
      
     return (
-       <div>
+       <div className="humidityWrapper" >
             <h1> Humidity </h1>
+            <p> { humidity } </p>
+           
        </div>
     );  
 

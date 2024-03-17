@@ -5,19 +5,21 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
+import '../../Sass/Components/WrappersComponents/WindStatus.scss';
 
-
-export const WindStatus = () => {
-
-    
-    
-
-   
+export const WindStatus = ( { speedWint, currentDate } ) => {
 
      
     return (
-       <div>
-            <h1>wind satus Compr</h1>
+       <div className="windStatusWrapper" > 
+
+            <h1>wind satus </h1>
+
+            <p> { speedWint } </p>
+
+            <p> { currentDate } </p>
+
+
        </div>
     );  
 
