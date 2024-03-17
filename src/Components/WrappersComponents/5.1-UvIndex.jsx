@@ -5,7 +5,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
 export const UvIndex = () => {
 
@@ -16,8 +16,10 @@ export const UvIndex = () => {
 
      
     return (
-       <div>
+       <div className="uvIndexWrapper" >
+
             <h1> Uv index </h1>
+            
        </div>
     );  
 

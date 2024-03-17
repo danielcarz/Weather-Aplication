@@ -21,7 +21,7 @@ export const WindStatusWrapper = () => {
     console.log( speedWint  )
            
     return (
-       <div className="windStatusHumidity">
+       <div className="windStatusContainer"> 
 
             
             <WindStatus speedWint = { speedWint } currentDate = { currentDate } ></WindStatus>

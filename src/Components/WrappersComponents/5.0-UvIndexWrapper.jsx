@@ -9,7 +9,7 @@ import { Visibility } from "./5.2-Visibility";
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/5.0-UvIndexWrapper.scss';
 
 export const UvIndexWrapper = () => {
 
@@ -20,10 +20,12 @@ export const UvIndexWrapper = () => {
 
      
     return (
-       <div>
+       <div className="uvIndexContainer">
+
             <UvIndex></UvIndex>
 
             <Visibility></Visibility>
+            
        </div>
     );  
 

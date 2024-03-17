@@ -18,32 +18,32 @@ export const CurrentWeather = () => {
         <section className="currentWeatherWrapper"> 
 
   
-        <figure className="currentWeatherImage">   
+            <figure className="currentWeatherImage">   
 
-                { 
-                    
-                    imageStateWeather && <img className="imageWeather" src={  imageStateWeather  } alt="image status weather" ></img>
-                    
-                } 
+                    { 
+                        
+                        imageStateWeather && <img className="imageWeather" src={  imageStateWeather  } alt="image status weather" ></img>
+                        
+                    } 
 
-        </figure>
+            </figure>
 
-        <section className="currentWeatherInfo">
+            <section className="currentWeatherInfo">
 
-            <h3 className="weatherCondition" > { weatherInformation.weatherDescription } </h3>
+                <h3 className="weatherCondition" > { weatherInformation.weatherDescription } </h3>
 
-            <h3 className="temperature"> { GetCelcius }º C  </h3>
+                <h3 className="temperature"> { GetCelcius }º C  </h3>
 
-        </section> 
+            </section> 
 
-        <div className="currentWeatherDateInfo">
- 
-                <h6>  <b> { currentDate } </b>  </h6> 
+            <div className="currentWeatherDateInfo">
+    
+                    <h6>  <b> { currentDate } </b>  </h6> 
 
-                <h2 className="currentWeatherTitle"> { weatherInformation.nameCity } </h2>
+                    <h2 className="currentWeatherTitle"> { weatherInformation.nameCity } </h2>
 
-            
-        </div> 
+                
+            </div> 
 
            
 
@@ -62,7 +62,7 @@ export const CurrentWeather = () => {
                     <h5>Wint: {weatherInformation.speedWint}</h5>
 
                 </div>
-
+ 
             </section> */}
         
         </section>

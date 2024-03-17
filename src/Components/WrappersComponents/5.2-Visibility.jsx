@@ -5,7 +5,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/5.2-Visibility.scss';
 
 export const Visibility = () => {
 
@@ -16,7 +16,7 @@ export const Visibility = () => {
 
      
     return (
-       <div>
+       <div className="visibilityWrapper" >
             <h1> Visibility </h1>
        </div>
     );  

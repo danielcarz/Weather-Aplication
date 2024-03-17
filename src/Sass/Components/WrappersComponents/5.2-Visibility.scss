@@ -24,40 +24,18 @@
   @mixin styles_desktop () {
 
     width: 100%;
-    height: 60vh; 
+    height: 70px;
 
-    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 15px;
 
-    border: 1px solid red;
-
-    .todayHighLightWrapper{
-
-        width: 100%;
-        height: 90%;
-
-    
-        display: flex;
-        justify-content: center;
-    
-        .todayHighLight{
-    
-            width: 50%; 
-
-        
-        }
-
-
-    }
-
-   
-    
 
   }
   
   
   
   
-  .todayHighLightContainer{
+  .visibilityWrapper{
     
   
     @include media-query($media_phone){
