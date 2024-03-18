@@ -16,11 +16,24 @@ export const UvIndex = () => {
 
      
     return (
-       <div className="uvIndexWrapper" >
+        <div className="windStatusWrapper" > 
 
-            <h1> Uv index </h1>
-            
-       </div>
+            <h1 className="windTittle" > Wind Status </h1> 
+
+            <figure className="gifWrapper" >
+                
+                {/* <img src={ windImage } alt="windIcon" /> */}
+
+            </figure> 
+
+            <div className="windAndTime" >
+
+                {/* <p> { speedWint } Km/h </p>
+
+                <p> { currentDate } </p> */}
+            </div>
+
+        </div>
     );  
 
     

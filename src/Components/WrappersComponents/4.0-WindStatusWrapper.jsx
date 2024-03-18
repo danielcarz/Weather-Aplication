@@ -13,7 +13,7 @@ import '../../Sass/Components/WrappersComponents/4.0-WindStatusWrapper.scss';
 export const WindStatusWrapper = () => {
 
 
-    const  { weatherInformation, currentDate, windStatusgift } = useContext( Contex );
+    const  { weatherInformation, currentDate, windStatusgift, windgift } = useContext( Contex );
     console.log( weatherInformation );
 
     const { humi, speedWint } = weatherInformation;
@@ -24,7 +24,7 @@ export const WindStatusWrapper = () => {
        <div className="windStatusContainer"> 
 
             
-            <WindStatus speedWint = { speedWint } currentDate = { currentDate } windImage = { windStatusgift } ></WindStatus>
+            <WindStatus speedWint = { speedWint } currentDate = { currentDate } windImage = { windgift } ></WindStatus>
 
             <Humidity humidity = { humi }  ></Humidity>
 

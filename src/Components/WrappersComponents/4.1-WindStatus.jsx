@@ -22,8 +22,10 @@ export const WindStatus = ( { speedWint, currentDate,  windImage } ) => {
             </figure> 
 
             <div className="windAndTime" >
-                <p> wind value </p>
-                <p> time now </p>
+
+                <p> { speedWint } Km/h </p>
+
+                <p> { currentDate } </p>
             </div>
 
        </div>

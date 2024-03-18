@@ -14,8 +14,18 @@ export const Humidity = ( { humidity } ) => {
     return (
        <div className="humidityWrapper" >
 
-            {/* <h1> Humidity </h1> */}
-            <p> { humidity } </p>
+             <h1 className="humidity" >  <b> Humidity  </b> </h1>
+
+            <div className="humidityAndDewPoint">
+
+                <p className="" > { humidity } % </p>
+
+                <p className="dewPoint" > The dew point is ... right now </p>
+            
+            
+            </div> 
+
+            
            
        </div>
     );  

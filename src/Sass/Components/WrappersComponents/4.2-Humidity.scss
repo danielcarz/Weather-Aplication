@@ -29,14 +29,35 @@
   
   @mixin styles_desktop () {
 
-    
-
     width: 100%;
     height: 70px;
 
+    padding: 5px;
+    
+    margin-top: 5px;
+
     border: 1px solid yellow;
     border-radius: 15px;
- 
+
+    .humidity{
+
+      font-size: 15px;
+    }
+    
+    .humidityAndDewPoint{
+
+      display: flex;
+      justify-content: space-between;
+      
+  
+      .dewPoint{
+  
+        font-size: 15px;
+      }
+
+
+
+    }
 
     
     
@@ -47,6 +68,7 @@
   
   
   .humidityWrapper{
+    
     
   
     @include media-query($media_phone){
