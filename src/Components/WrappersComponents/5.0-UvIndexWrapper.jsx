@@ -13,12 +13,16 @@ import '../../Sass/Components/WrappersComponents/5.0-UvIndexWrapper.scss';
 
 export const UvIndexWrapper = () => {
 
+    const  { uvIndexGif, weatherInformation} = useContext( Contex );
+
+    console.log( weatherInformation )
+
 
     return (
-            
+              
        <div className="uvIndexContainer">
 
-            <UvIndex></UvIndex>
+            <UvIndex uvIndexImage = { uvIndexGif }></UvIndex>
 
             <Visibility></Visibility>
             

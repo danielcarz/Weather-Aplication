@@ -13,21 +13,23 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
   
             .then( data => { 
  
-               
-
+            console.log( 'dataaaaa', data )
+  
 //CURRENT DATES
 
                 const [ { cod, city, list } ] = [ data ];
                                 
                 const { id, name } = city; 
                 
-                const [ { main, wind, dt_txt, rain, weather, pop } ] = list ;
+                const [ { main, wind, dt_txt, rain, weather, pop, visibility } ] = list ;
                 
                 const { speed } = wind;
                 
-                const { temp, humidity } = main;
+                const { temp, humidity, feels_like, temp_max, temp_min, sea_level } = main;
 
                 const { main: weatherMain, description } = weather[0];
+
+
 
 
 
@@ -73,6 +75,11 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     speedWint: speed,
                     rain: rain,
                     pop: pop,
+                    feels_like,
+                    temp_max,
+                    temp_min, 
+                    sea_level,
+
 
                     conditionsInfo: weather,
                     weatherCondition: weatherMain, 

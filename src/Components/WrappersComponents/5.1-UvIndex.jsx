@@ -7,22 +7,22 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
-export const UvIndex = () => {
+export const UvIndex = ( { uvIndexImage } ) => {
 
     
     
 
    
-
+ 
      
     return (
         <div className="windStatusWrapper" > 
 
-            <h1 className="windTittle" > Wind Status </h1> 
+            <h1 className="windTittle" > Uv index </h1> 
 
             <figure className="gifWrapper" >
                 
-                {/* <img src={ windImage } alt="windIcon" /> */}
+                 <img src={ uvIndexImage } alt="windIcon" /> 
 
             </figure> 
 

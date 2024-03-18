@@ -16,7 +16,7 @@ import thunderstorm  from '../../../Assets/stormy.png';
 
 import snow from '../../../Assets/snow.png';
 
-import windStatusgift  from '../../../Assets/sun-unscreengif.gif';
+import uvIndexGif  from '../../../Assets/sun-unscreengif.gif';
 import sungift  from '../../../Assets/sunsetgift.gif';
 import windgift  from '../../../Assets/windgift.gif';
     //styles
@@ -82,7 +82,7 @@ import windgift  from '../../../Assets/windgift.gif';
             imageStateWeather,
 
             //wind status
-            windStatusgift,
+            uvIndexGif,
             sungift,
             windgift,
 

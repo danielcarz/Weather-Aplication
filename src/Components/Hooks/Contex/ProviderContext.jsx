@@ -20,7 +20,7 @@ export const ContexProvider = ( { children } ) => {
     
 //WEATHER ARRAY INFO 
     const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
-    //console.log( weatherObjectsInformation )
+    console.log( weatherObjectsInformation )
         
 
 
@@ -35,6 +35,7 @@ export const ContexProvider = ( { children } ) => {
 
             
         useGetDataFromApi( pais, useFetchApi )
+
             .then( ( weatherData ) => { 
                 
 
@@ -49,7 +50,7 @@ export const ContexProvider = ( { children } ) => {
 
         
 //WEATHER IMAGE 
-    const {  imageStateWeather, windStatusImage,  windStatusgift, sungift, windgift } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
+    const {  imageStateWeather, windStatusImage, uvIndexGif, sungift, windgift } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
     console.log( weatherObjectsInformation.midnightTemperatures )
 
     const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
@@ -118,7 +119,7 @@ export const ContexProvider = ( { children } ) => {
                 
                 //wind status
                 windStatusImage,
-                windStatusgift,
+                uvIndexGif,
                 sungift,
                 windgift,
                
