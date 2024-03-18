@@ -17,7 +17,7 @@ export const Visibility = () => {
      
     return (
        <div className="visibilityWrapper" >
-            <h1> Visibility </h1>
+          {/*   <h1> Visibility </h1> */}
        </div>
     );  
 

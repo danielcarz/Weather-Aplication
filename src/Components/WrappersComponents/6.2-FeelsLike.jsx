@@ -18,7 +18,7 @@ export const FeelsLike = () => {
      
     return (
        <div className="feelsLikeWrapper" >
-            <h1> Feels like </h1>
+          {/*   <h1> Feels like </h1> */}
        </div>
     );  
 

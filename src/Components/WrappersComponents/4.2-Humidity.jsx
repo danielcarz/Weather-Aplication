@@ -14,7 +14,7 @@ export const Humidity = ( { humidity } ) => {
     return (
        <div className="humidityWrapper" >
 
-            <h1> Humidity </h1>
+            {/* <h1> Humidity </h1> */}
             <p> { humidity } </p>
            
        </div>

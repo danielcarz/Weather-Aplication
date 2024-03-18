@@ -7,18 +7,24 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/4.1-WindStatus.scss';
 
-export const WindStatus = ( { speedWint, currentDate } ) => {
+export const WindStatus = ( { speedWint, currentDate,  windImage } ) => {
 
      
     return (
        <div className="windStatusWrapper" > 
 
-            <h1>wind status </h1>
+             <h1 className="windTittle" > Wind Status </h1> 
 
-            <p> { speedWint } </p>
+            <figure className="gifWrapper" >
+             
+               <img src={ windImage } alt="windIcon" />
 
-            <p> { currentDate } </p>
+            </figure> 
 
+            <div className="windAndTime" >
+                <p> wind value </p>
+                <p> time now </p>
+            </div>
 
        </div>
     );  
