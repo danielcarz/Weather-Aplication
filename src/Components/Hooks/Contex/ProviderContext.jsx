@@ -1,7 +1,3 @@
-/*
-'https://api.openweathermap.org/data/2.5/forecast?q=bogota,co&appid=389f893e1c972644360ed8df4b834963'
-
-*/
 
 import { useEffect, useState } from 'react'
 
@@ -27,8 +23,6 @@ export const ContexProvider = ( { children } ) => {
 //FORMS
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
 
-
-    //console.log( isNewValue );
     
 //FETCH   
     useEffect( ( ) => {
@@ -57,14 +51,12 @@ export const ContexProvider = ( { children } ) => {
     console.log( maidnight_images )
 
     
-    //CURRENT DATE
-    
+//CURRENT DATE   
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
     
     
     
-    //MIDNIGHT ARRAY TEMPERATURE
-    
+//MIDNIGHT ARRAY TEMPERATURE 
     const { midnightTemperatures, midnightDates } = weatherObjectsInformation;
 
     const midnightWeather =  midnightDates.map( item => item.weather );
@@ -73,20 +65,11 @@ export const ContexProvider = ( { children } ) => {
 
     
     
-    //WEATHER CELCIUS
+//WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );
     const midnight_celcius = weatherObjectsInformation.midnightTemperatures.map( item => useGetCentigrades( item.midnigh_temp )  )
-    //console.log( midnight_celcius )
+    
 
-    
-    
-        
-    
- 
-    
- 
-   
-    
     
     return(  
         <Contex.Provider value = { 
