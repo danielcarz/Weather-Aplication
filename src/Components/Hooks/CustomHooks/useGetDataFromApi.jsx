@@ -76,8 +76,8 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     rain: rain,
                     pop: pop,
                     feels_like,
-                    temp_max,
-                    temp_min, 
+                    max_temperature: temp_max,
+                    min_Temperature: temp_min, 
                     sea_level,
 
 
@@ -95,6 +95,7 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 
 
             })
+            
             .catch((error) => {
                 // Promise rejected, handle the error
                 console.error('Error fetching weather data:', error);

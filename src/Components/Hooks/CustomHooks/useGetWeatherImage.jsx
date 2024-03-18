@@ -17,8 +17,9 @@ import thunderstorm  from '../../../Assets/stormy.png';
 import snow from '../../../Assets/snow.png';
 
 import uvIndexGif  from '../../../Assets/sun-unscreengif.gif';
-import sungift  from '../../../Assets/sunsetgift.gif';
+import sunsetgift  from '../../../Assets/sunsetgift.gif';
 import windgift  from '../../../Assets/windgift.gif';
+
     //styles
 
     export const useGetWeatherImage =  ( weatherCondition, weatherDescription ) => {
@@ -83,7 +84,7 @@ import windgift  from '../../../Assets/windgift.gif';
 
             //wind status
             uvIndexGif,
-            sungift,
+            sunsetgift,
             windgift,
 
             

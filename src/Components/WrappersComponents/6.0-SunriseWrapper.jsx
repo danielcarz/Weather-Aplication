@@ -5,8 +5,8 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //childs
-import { Sunrise } from './6.1-Sunrise';
-import { FeelsLike } from "./6.2-FeelsLike";
+import { Sunrise } from './6.1-Sunrise.jsx';
+import { FeelsLike } from "./6.2-FeelsLike.jsx";
 
 
 //styles
@@ -14,13 +14,13 @@ import '../../Sass/Components/WrappersComponents/6.0-sunriseWrapper.scss';
 
 export const SunriseWrapper = () => {
 
-
+    const  { sunsetgift} = useContext( Contex );
      
     return (
-       <div className="sunriseContainer" >
+       <div className="sunriseContainer" > 
 
-            <Sunrise></Sunrise>
-            
+            <Sunrise sunsetImage = { sunsetgift }></Sunrise>
+             
             <FeelsLike></FeelsLike> 
             
        </div>

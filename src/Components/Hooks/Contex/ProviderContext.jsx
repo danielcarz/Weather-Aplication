@@ -5,7 +5,18 @@ import { useEffect, useState } from 'react'
 import { Contex } from './CreateContext';
 
 //custom hooks 
-import { useFetchApi, useHandleForms,  useGetWeatherImage, useGetCentigrades, useGetCurrentDate, useGetDataFromApi } from '../CustomHooks/index';
+    import { 
+            useFetchApi,
+
+            useHandleForms,
+
+            useGetWeatherImage,
+
+            useGetCentigrades,
+
+            useGetCurrentDate,
+            
+            useGetDataFromApi } from '../CustomHooks/index';
 
 
 
@@ -20,11 +31,11 @@ export const ContexProvider = ( { children } ) => {
         
 
 
-//FORMS
+// FOMRS: varaibles and fucntions to handle forms 
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
 
     
-//FETCH   
+// GET DATA FROM API: useGetDataFromAPI () 
     useEffect( ( ) => {
 
             
@@ -44,7 +55,7 @@ export const ContexProvider = ( { children } ) => {
 
         
 //WEATHER IMAGE 
-    const {  imageStateWeather, windStatusImage, uvIndexGif, sungift, windgift } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
+    const {  imageStateWeather, windStatusImage, uvIndexGif,sunsetgift, windgift } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
     console.log( weatherObjectsInformation.midnightTemperatures )
 
     const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
@@ -103,8 +114,8 @@ export const ContexProvider = ( { children } ) => {
                 //wind status
                 windStatusImage,
                 uvIndexGif,
-                sungift,
-                windgift,
+                sunsetgift, 
+                windgift, 
                
                 
 

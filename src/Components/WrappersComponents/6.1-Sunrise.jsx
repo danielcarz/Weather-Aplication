@@ -4,20 +4,36 @@ import React, { useState, useEffect, useContext } from "react";
 import { Contex } from '../Hooks/Contex/CreateContext';
 
 
-
 //styles
-import '../../Sass/Components/WrappersComponents/6.1-sunrise.scss';
+import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
+export const Sunrise = ( { sunsetImage } ) => {
 
-export const Sunrise = () => {
+    
+     
 
+   
+ 
      
     return (
-       <div className="sunriseWrapper" >
+        <div className="windStatusWrapper" > 
 
-            <h1> Sunrise </h1>
-            
-       </div>
+            <h1 className="windTittle" > Sunrise  </h1> 
+
+            <figure className="gifWrapper" > 
+                
+                 <img src={ sunsetImage } alt="windIcon" /> 
+
+            </figure>  
+
+            <div className="windAndTime" > 
+
+                {/* <p> { speedWint } Km/h </p>
+
+                <p> { currentDate } </p> */}
+            </div>
+ 
+        </div>
     );  
 
     
