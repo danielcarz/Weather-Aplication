@@ -1,7 +1,7 @@
 import React from "react";
 
-//components
-import { WeatherCard, TodayHightLight } from "../Components";  
+// parents components
+import { WeatherCard, TodayHightLight, ParentPredictionWeatherState } from "../Components";  
 
 //styles
 import '../Sass/App.scss';
@@ -11,14 +11,16 @@ export const MainPage = () => {
     return (
         <div className="appContainer">
 
-          <section className="wrapperOne">
+          <div className="wrapperOne">
 
-            <WeatherCard></WeatherCard>
+            <WeatherCard></WeatherCard> 
 
-            <TodayHightLight></TodayHightLight> 
+            <TodayHightLight></TodayHightLight>
 
-          </section>
 
+          </div>
+
+          <ParentPredictionWeatherState></ParentPredictionWeatherState>  
          
         
         </div>

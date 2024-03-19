@@ -1,20 +1,20 @@
 import React, { Children, useContext } from "react";
 
 //context
-import { Contex } from '../Hooks/Contex/CreateContext';
+import { Contex } from './Hooks/Contex/CreateContext';
 //components
 
 //styles
-import '../../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss';
+import '../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss';
 
 export const ParentPredictionWeatherState = ( { children } ) => {
-
+ 
     
 
     return (
-        <section className="ParentpredictionWeatherContainer"> 
+        <section className="ParentpredictionWeatherContainer">  
 
-            <h4>Predictions for next days</h4>
+            <h4 className="predictionTittle">Predictions for next days</h4>  
 
             <div className="wrapper">
 

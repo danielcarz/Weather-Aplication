@@ -43,16 +43,27 @@
   }
   
   @mixin styles_desktop () {
+
     display: flex;
     flex-direction: column;
+
+    height: 30vh;
+
+    background-color: rgb(119, 253, 9);
+    border: 1px solid red;
  
+    .predictionTittle{
+
+     font-size: 18px;
+    }
     .wrapper{
      
      width: 100%;
- 
+
      display: flex;
  
      border: 1px solid red;
+
  
     }
   }

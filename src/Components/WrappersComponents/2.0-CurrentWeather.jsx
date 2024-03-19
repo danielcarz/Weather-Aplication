@@ -45,25 +45,7 @@ export const CurrentWeather = () => {
                 
             </div> 
 
-           
 
-
-           {/*  <section className="currentWeatherfeatures">
-
-                <div className="pop"> 
-
-                    <h5>Pop: {  weatherInformation.pop } % </h5>
-
-                </div> 
-
-
-                <div className="wind">
-
-                    <h5>Wint: {weatherInformation.speedWint}</h5>
-
-                </div>
- 
-            </section> */}
         
         </section>
 ); 

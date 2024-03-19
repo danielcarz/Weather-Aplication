@@ -9,7 +9,6 @@ export * from './2.0-WeatherCard.jsx';
 //Today highLight
 export * from './3.0-TodayHightLight.jsx';
 
-//export * from './2.1-FormCountry.jsx';
+//predcition weather
+export * from './4.0-ParentPredictionWeatherState.jsx';
 
-
-//export * from './Testing.jsx'; 
