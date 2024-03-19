@@ -18,7 +18,7 @@ import { Contex } from './CreateContext';
             
             useGetDataFromApi } from '../CustomHooks/index';
 
-
+ 
 
  
  
@@ -27,9 +27,7 @@ export const ContexProvider = ( { children } ) => {
     
 //WEATHER ARRAY INFO 
     const [weatherObjectsInformation, setWeatherObjectsInformation] = useState( { midnightTemperatures: [ ], midnightDates: [ ] }  );
-    console.log( weatherObjectsInformation )
-        
- 
+   
 
 // FOMRS: varaibles and fucntions to handle forms 
     const { inputValue, pais, handleInputChange, handleSubmit, isNewValue, setIsNewValue } = useHandleForms( );
@@ -56,17 +54,18 @@ export const ContexProvider = ( { children } ) => {
         
 //WEATHER IMAGE 
     const {  imageStateWeather, windStatusImage, uvIndexGif,sunsetgift, windgift, celciusIcon } = useGetWeatherImage( weatherObjectsInformation.weatherCondition, weatherObjectsInformation.weatherDescription );
-    console.log( celciusIcon )
+    //console.log( celciusIcon )
 
     const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
-    console.log( maidnight_images )
+    console.log( maidnight_images ) 
+
+    //const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )   
 
     
 //CURRENT DATE   
     const { currentDate, nextDaysArray, nextDays } = useGetCurrentDate( );
     
-    
-    
+        
 //MIDNIGHT ARRAY TEMPERATURE 
     const { midnightTemperatures, midnightDates } = weatherObjectsInformation;
 
@@ -74,7 +73,7 @@ export const ContexProvider = ( { children } ) => {
     const combinedWeather = midnightWeather.flat(); 
     const maidNightStatus =  combinedWeather.map( item => item.main );
 
-    
+    console.log( maidNightStatus )
     
 //WEATHER CELCIUS
     const GetCelcius = useGetCentigrades( weatherObjectsInformation.temperature );

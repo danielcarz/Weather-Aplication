@@ -9,19 +9,27 @@ import { CardPrediction } from './WrappersComponents/index';
 //styles
 import '../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss';
 
-export const ParentPredictionWeatherState = ( ) => {
+export const ParentPredictionWeatherState = ( ) => { 
  
-    const { nextDaysArray } = useContext ( Contex );
-    console.log( nextDaysArray ) 
-
+    const { nextDaysArray, maidNightStatus } = useContext ( Contex );
+   console.log( maidNightStatus )
+ 
     return (
         <section className="ParentpredictionWeatherContainer">  
 
             <h4 className="predictionTittle">Predictions for next days</h4>  
 
             <div className="wrapper">
+ 
+               { nextDaysArray.map( ( day, index )  => 
+               
+                <CardPrediction key={ index }  > 
 
-               <CardPrediction></CardPrediction>
+                     { day } 
+
+                     { maidNightStatus[index] && ( <> Prediction:  {  maidNightStatus[index]  } </> )}  
+
+                </CardPrediction> ) }
 
             </div>
 

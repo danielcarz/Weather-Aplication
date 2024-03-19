@@ -15,7 +15,7 @@ export const MainPage = () => {
 
             <WeatherCard></WeatherCard> 
 
-            <TodayHightLight></TodayHightLight>
+            <TodayHightLight></TodayHightLight> 
 
 
           </div>

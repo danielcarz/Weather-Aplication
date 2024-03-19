@@ -27,7 +27,7 @@ import celciusIcon from '../../../Assets/celsius.png';
     export const useGetWeatherImage =  ( weatherCondition, weatherDescription ) => {
  
         let imageStateWeather;
-
+ 
 
         if( weatherCondition  === 'Rain'){
 
@@ -82,6 +82,7 @@ import celciusIcon from '../../../Assets/celsius.png';
         }
 
         return {
+
             imageStateWeather,
 
             //wind status

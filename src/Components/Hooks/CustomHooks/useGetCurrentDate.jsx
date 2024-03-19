@@ -43,7 +43,7 @@ import React from "react";
         } );
         
         
-        console.log( nextDaysArray )
+     
 
         return {
             //current date
