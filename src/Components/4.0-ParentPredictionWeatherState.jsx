@@ -2,12 +2,14 @@ import React, { Children, useContext } from "react";
 
 //context
 import { Contex } from './Hooks/Contex/CreateContext';
-//components
+
+//childs
+import { CardPrediction } from './WrappersComponents/index';
 
 //styles
 import '../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss';
 
-export const ParentPredictionWeatherState = ( { children } ) => {
+export const ParentPredictionWeatherState = ( ) => {
  
     
 
@@ -18,7 +20,7 @@ export const ParentPredictionWeatherState = ( { children } ) => {
 
             <div className="wrapper">
 
-                { children }
+               <CardPrediction></CardPrediction>
 
             </div>
 

@@ -22,3 +22,6 @@ export * from './5.0-UvIndexWrapper';
 //Sunrise wrapper
 export * from './6.0-SunriseWrapper';
 
+// cards predcition
+export * from './7.0-CardsPrediction';
+
