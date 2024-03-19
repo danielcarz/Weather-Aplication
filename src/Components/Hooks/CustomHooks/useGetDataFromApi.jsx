@@ -40,14 +40,14 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 const getMidnightDateObject = list.filter( item => item.dt_txt.endsWith('00:00:00') );
                 
 
-                const midnightTemperatures = getMidnightDateObject.slice(0, 2).map( date => {
+                const midnightTemperatures = getMidnightDateObject.slice(0, 5).map( date => {
 
                   const { main } =  date;
                   const { temp } = main;
 
                   const midnight_ValueMainProperty = date.weather[0].main
                   const midnight_ValueDescriptionProperty = date.weather[0].description
-
+                  
                   
                   return { 
                     
@@ -58,6 +58,8 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                   }
                   
                 } );
+
+                console.log( midnightTemperatures )
                 
                 
 
