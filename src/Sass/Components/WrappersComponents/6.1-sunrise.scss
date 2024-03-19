@@ -36,7 +36,44 @@
     display: flex;
     flex-direction: column;
 
+    .sunriseTittle{
+
+      font-size: 15px;
+
+      padding: 5px;
+    }
+
     
+    .gifWrapper{
+
+      width: 100%;
+      height: 100px;
+
+      display: flex;
+      justify-content: center;
+
+
+      img{
+
+        width: 20%;
+        height: 50px;
+
+
+      }
+    
+
+    }
+
+    .sunriseDescriptions{
+      
+
+      display: flex;
+
+      font-size: 13px;
+
+      border: 1px solid red;
+
+    }
 
   }
   

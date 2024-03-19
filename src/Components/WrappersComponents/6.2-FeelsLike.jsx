@@ -5,24 +5,24 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-import '../../Sass/Components/WrappersComponents/4.2-Humidity.scss'
-
+import '../../Sass/Components/WrappersComponents/6.2-FeelsLike.scss';
+ 
 export const FeelsLike = ( { feelsLike, celciusIcon } ) => {
 
    
-     
+      
     return ( 
-       <div className="humidityWrapper" > 
+       <div className="feelsLikeWrapper" >  
 
-             <h1 className="humidity" >  <b> Feels like  </b> </h1>
+             <h1 className="feelLikeTittle" >  <b> Feels like  </b> </h1>
 
-            <div className="humidityAndDewPoint">
+            <div className="feelsLikeAndHumidity">
 
-               <figure className="feelsLikeWrapper">
+               <figure className="feelsLikeWrapperImage">
 
                   <img  src = { celciusIcon } alt="feelLikeIcon" />  
 
-                  <p className="feelslike" > { feelsLike }  </p> 
+                  <p className="feelslike" >  <b>  { feelsLike }  </b> </p>  
 
                </figure>
 

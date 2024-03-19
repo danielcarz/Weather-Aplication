@@ -5,15 +5,15 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
+import '../../Sass/Components/WrappersComponents/6.1-sunrise.scss';
 
 export const Sunrise = ( { sunsetImage, sealevel, population, Atmosphericpressure } ) => {
 
       
     return (
-        <div className="windStatusWrapper" > 
+        <div className="sunriseWrapper" > 
 
-            <h1 className="windTittle" > Sunrise  </h1> 
+            <h1 className="sunriseTittle" > Sunrise  </h1> 
 
             <figure className="gifWrapper" > 
                 
@@ -21,13 +21,17 @@ export const Sunrise = ( { sunsetImage, sealevel, population, Atmosphericpressur
 
             </figure>  
 
-            <div className="windAndTime" > 
+            <div className="sunriseDescriptions" > 
 
-             
+                <p>  <b> Sea level:  </b> { sealevel } mb </p>
+                
+                <p> <b> Population: </b> { population } </p>
 
-                <p> Sea level: { sealevel }  </p>
-                <p> Populati{ population } </p>
-                <p> { Atmosphericpressure } </p>
+                <p> 
+                    <b> pressure atmospheric:  </b> 
+                    { Atmosphericpressure } mb 
+                </p>
+
             </div>
  
         </div>
