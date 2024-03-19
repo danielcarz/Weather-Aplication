@@ -14,13 +14,24 @@ import React from "react";
         const nextDateTwo = new Date( fecha )
         nextDateTwo.setDate( fecha.getDate() + 2 );
 
+        const nextDateThree = new Date( fecha )
+        nextDateThree.setDate( fecha.getDate() + 3 );
+
+        const nextDateFour = new Date( fecha )
+        nextDateFour.setDate( fecha.getDate() + 4 );
+        
+
+        const nextDateFive = new Date( fecha )
+        nextDateFive.setDate( fecha.getDate() + 5 );
+  
         const nextDaysArray = [
              
-            //nextDateOne.toLocaleDateString( 'es-ES', opciones),
-            //nextDateTwo.toLocaleDateString( 'es-ES', opciones),
-
+        
             nextDateOne.toLocaleDateString('en-US', opciones),
-            nextDateTwo.toLocaleDateString('en-US', opciones)
+            nextDateTwo.toLocaleDateString('en-US', opciones),
+            nextDateThree.toLocaleDateString('en-US', opciones),
+            nextDateFour.toLocaleDateString('en-US', opciones),
+            nextDateFive.toLocaleDateString('en-US', opciones)
 
         ];
 
@@ -32,7 +43,7 @@ import React from "react";
         } );
         
         
-
+        console.log( nextDaysArray )
 
         return {
             //current date

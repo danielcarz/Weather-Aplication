@@ -11,7 +11,8 @@ import '../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss'
 
 export const ParentPredictionWeatherState = ( ) => {
  
-    
+    const { nextDaysArray } = useContext ( Contex );
+    console.log( nextDaysArray ) 
 
     return (
         <section className="ParentpredictionWeatherContainer">  
