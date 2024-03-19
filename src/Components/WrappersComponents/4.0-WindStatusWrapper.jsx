@@ -14,13 +14,11 @@ export const WindStatusWrapper = () => {
 
 
     const  { weatherInformation, currentDate, windStatusgift, windgift } = useContext( Contex );
-    console.log( weatherInformation );
 
     const { humi, speedWint } = weatherInformation;
 
-    console.log( speedWint  )
            
-    return ( 
+    return (  
        <div className="windStatusContainer"> 
 
             

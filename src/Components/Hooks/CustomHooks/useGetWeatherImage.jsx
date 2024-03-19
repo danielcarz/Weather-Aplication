@@ -20,6 +20,8 @@ import uvIndexGif  from '../../../Assets/sun-unscreengif.gif';
 import sunsetgift  from '../../../Assets/sunsetgift.gif';
 import windgift  from '../../../Assets/windgift.gif';
 
+import celciusIcon from '../../../Assets/celsius.png';
+
     //styles
 
     export const useGetWeatherImage =  ( weatherCondition, weatherDescription ) => {
@@ -86,6 +88,8 @@ import windgift  from '../../../Assets/windgift.gif';
             uvIndexGif,
             sunsetgift,
             windgift,
+
+            celciusIcon
 
             
         };

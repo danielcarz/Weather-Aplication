@@ -23,7 +23,7 @@ export const TodayHightLight = () => {
 
                  <section className="todayHighLight uvIndexWrapper"> <SunriseWrapper></SunriseWrapper> </section>   
 
-               
+                 
             
             </section>
  

@@ -7,14 +7,9 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
-export const Sunrise = ( { sunsetImage } ) => {
+export const Sunrise = ( { sunsetImage, sealevel, population, Atmosphericpressure } ) => {
 
-    
-     
-
-   
- 
-     
+      
     return (
         <div className="windStatusWrapper" > 
 
@@ -28,9 +23,11 @@ export const Sunrise = ( { sunsetImage } ) => {
 
             <div className="windAndTime" > 
 
-                {/* <p> { speedWint } Km/h </p>
+             
 
-                <p> { currentDate } </p> */}
+                <p> Sea level: { sealevel }  </p>
+                <p> Populati{ population } </p>
+                <p> { Atmosphericpressure } </p>
             </div>
  
         </div>

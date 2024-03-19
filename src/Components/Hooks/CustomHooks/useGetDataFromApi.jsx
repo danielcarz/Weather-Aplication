@@ -18,14 +18,15 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
 //CURRENT DATES
 
                 const [ { cod, city, list } ] = [ data ];
-                                
-                const { id, name } = city; 
+                                 
+                const { id, name, population } = city; 
                 
                 const [ { main, wind, dt_txt, rain, weather, pop, visibility } ] = list ;
                 
-                const { speed } = wind;
+                const { speed } = wind; 
                 
-                const { temp, humidity, feels_like, temp_max, temp_min, sea_level } = main;
+                const { temp, humidity, grnd_level, pressure, feels_like, temp_max, temp_min, sea_level } = main;
+              
 
                 const { main: weatherMain, description } = weather[0];
 
@@ -66,8 +67,7 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     id: id, 
                     code: cod,
 
-                    nameCity: name,
-                  
+                    
                     date: dt_txt,
 
                     temperature: temp, 
@@ -78,12 +78,20 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                     feels_like,
                     max_temperature: temp_max,
                     min_Temperature: temp_min, 
-                    sea_level,
-
-
+                    
+                    
                     conditionsInfo: weather,
                     weatherCondition: weatherMain, 
                     weatherDescription: description,
+                    
+                    //INFO COUNTRY
+                    nameCity: name,
+                    population,
+                    
+                    Atmosphericpressureatsealevel: grnd_level, 
+                    pressure,
+                    sea_level,
+                    
 
                     //MIDNIGHT DATES
                     
@@ -95,7 +103,7 @@ export const useGetDataFromApi = ( pais, dataProvider ) => {
                 
 
             })
-            
+
             .catch((error) => {
                 // Promise rejected, handle the error
                 console.error('Error fetching weather data:', error);
