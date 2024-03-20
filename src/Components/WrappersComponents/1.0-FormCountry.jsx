@@ -5,7 +5,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 
 
 //styles
-
+import '../../Sass/Components/WrappersComponents/Form.scss';
 
 export const FormCountry = () => {
  
@@ -16,10 +16,10 @@ export const FormCountry = () => {
 
      
     return (
-        <form onSubmit={ handleSubmit } >
+        <form  className="form" onSubmit={ handleSubmit } >
            
             <input
-
+                className="input"
                 type="text"
                 placeholder=" Weather in your city or country " 
                 value={inputValue}

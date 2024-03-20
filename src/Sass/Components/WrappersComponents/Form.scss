@@ -1,0 +1,96 @@
+//VARIABLES (it musb be in the first position)
+@use '../../Mixins/Variables.scss' as *;
+
+/* @import 'bootstrap/scss/bootstrap'; */
+
+//MEDIA
+@import '../../Mixins/MediaQueries/MediaQueries.scss';
+
+
+@mixin styles_phone () {
+
+   
+    
+    
+  }
+  
+  @mixin styles_tablets () {
+
+   
+   
+  }
+  
+  @mixin styles_desktop () {
+
+    
+  }
+  
+  
+  
+  
+  .form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: none;
+
+    .input{
+
+        background-color: transparent;
+
+        color: wheat;
+
+        border: none;
+    }
+
+    .form input[type="text"] {
+
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        
+    }
+
+   
+
+    .form input[type="text"]:focus {
+        outline: none;
+        border-color: #007bff; /* Cambiar color del borde al enfocar */
+    }
+
+    .form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+
+    .form input[type="submit"]:hover {
+        background-color: #0056b3; /* Cambiar color al pasar el mouse */
+    }
+   
+  
+    @include media-query($media_phone){
+      @include styles_phone();
+    }
+  
+    @include media-query($media_tablet){
+      @include styles_tablets();
+    }
+  
+    @include media-query($media_desktop){
+      @include styles_desktop();
+    }
+  
+  }
