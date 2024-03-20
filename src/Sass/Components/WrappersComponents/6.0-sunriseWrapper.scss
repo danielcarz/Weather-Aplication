@@ -33,10 +33,13 @@
    
     width: 100%;
     height: 100%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
     
     padding: 5px;
     
-    border: 1px solid rgb(240, 76, 1);
+     
     border-radius: 15px; 
 
     
@@ -51,6 +54,7 @@
   
   .sunriseContainer{
     
+    background-image: linear-gradient(to bottom right, #5e5555, #0d1a27); 
   
     @include media-query($media_phone){
       @include styles_phone();

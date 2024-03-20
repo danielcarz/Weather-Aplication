@@ -32,7 +32,7 @@
     flex-direction: column;
  
     border: 1px solid red;
-    background-color: blue;
+    background-color: black;
 
     .wrapperOne{
  
@@ -46,7 +46,8 @@
   
   .appContainer{
     
-  
+    color: wheat;
+     
     @include media-query($media_phone){
       @include styles_phone();
     }

@@ -48,6 +48,13 @@
   
   
   .windStatusContainer{
+
+    background-image: linear-gradient(to bottom right, #5e5555, #0d1a27);
+    //background-image: linear-gradient(to bottom right, #333, #23476b, #666666, #999999);
+
+
+    border: none;
+    border-radius: 15px;
     
   
     @include media-query($media_phone){

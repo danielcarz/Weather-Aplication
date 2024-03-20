@@ -29,15 +29,15 @@
   
   @mixin styles_desktop () {
 
-    width: 100%;
+    width: 90%;
     height: 85px;
 
     padding: 5px;
     
     margin-top: 20px;
 
-    border: 1px solid yellow;
-    border-radius: 15px;
+    border-top: 1px solid gray;
+    
 
     .humidity{
 
