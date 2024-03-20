@@ -208,7 +208,7 @@
       height: 100px;
 
       
-
+      text-align: center;
   
 
       .imageWeather{
@@ -230,15 +230,17 @@
       display: flex;
       justify-content: space-around;
 
+      font-size: 16px;
 
-      .weatherCondition{
 
-        font-size: 15px;
+      .weatherCondition{ 
+
+      
 
       };
 
       .temperature{
-        font-size: 15px;
+        
        
       }
 

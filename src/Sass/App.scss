@@ -24,14 +24,14 @@
   @mixin styles_desktop () {
 
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     
     padding: 20px;
     
     display: flex;
     flex-direction: column;
  
-    border: 1px solid red;
+    
     background-color: black;
 
     .wrapperOne{
