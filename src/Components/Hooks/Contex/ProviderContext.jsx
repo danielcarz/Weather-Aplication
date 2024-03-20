@@ -57,8 +57,8 @@ export const ContexProvider = ( { children } ) => {
     //console.log( celciusIcon )
 
     const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )  
-    const imageStateWeatherArray = maidnight_images.map(item => item.imageStateWeather);
-    console.log(  'imgs', imageStateWeatherArray )
+    const imageStateWeatherPredictionsArray = maidnight_images.map(item => item.imageStateWeather);
+    
     
     //const maidnight_images =   weatherObjectsInformation.midnightTemperatures.map( item =>  useGetWeatherImage( item.midnight_main, item.midnight_description )  )   
 
@@ -124,11 +124,11 @@ export const ContexProvider = ( { children } ) => {
                 celciusIcon,
                
                 //test
-                imageStateWeatherArray
+                imageStateWeatherPredictionsArray
 
             }
             
-            
+             
         } >
 
             {children}

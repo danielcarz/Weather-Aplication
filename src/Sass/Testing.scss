@@ -1,0 +1,63 @@
+//VARIABLES (it musb be in the first position)
+@use './Mixins/Variables.scss' as *;
+
+@import 'bootstrap/scss/bootstrap';
+
+//MEDIA
+@import './Mixins/MediaQueries/MediaQueries.scss';
+
+
+@mixin styles_phone () {
+   
+    
+  }
+  
+  @mixin styles_tablets () {
+   
+  }
+  
+  @mixin styles_desktop () {
+
+    @keyframes waterFall {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 1;
+        }
+      }
+      
+      .water-fall {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 3px;
+        height: 100%;
+        background-color: rgba(0, 0, 255, 0.5);
+        animation: waterFall 3s linear infinite;
+        transform-origin: 50% 0;
+      }
+      
+  }
+  
+   
+  
+  
+  .appContainer{
+    
+  
+    @include media-query($media_phone){
+      @include styles_phone();
+    }
+  
+    @include media-query($media_tablet){
+      @include styles_tablets();
+    }
+  
+    @include media-query($media_desktop){
+      @include styles_desktop();
+    }
+  
+  }

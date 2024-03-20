@@ -9,16 +9,12 @@ import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
 export const CardPrediction = ( { children } ) => {
 
-    
-    
 
-   
- 
      
     return (
-        <div className="cardWrapper" > 
+        <div > 
 
-            <h1> { children } </h1>
+            { children } 
 
         </div>
     );  

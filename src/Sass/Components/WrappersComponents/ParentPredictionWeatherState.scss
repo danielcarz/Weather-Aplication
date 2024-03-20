@@ -49,23 +49,42 @@
 
     height: 30vh;
 
-    background-color: rgb(119, 253, 9);
+    
     border: 1px solid red;
  
     .predictionTittle{
 
      font-size: 18px;
     }
+
     .wrapper{
+
+      width: 100%;
+      height: 150px;
+
+      display: flex;
+      border: 1px solid red;
      
-     width: 100%;
 
-     display: flex;
- 
-     border: 1px solid red;
+      .imageStatePredictionWeather{
 
- 
-    }
+        border: 1px solid red;
+
+        width: 100px; 
+        height: 75px;
+
+        
+
+        img{
+          width: 90px;
+          height: 70px;
+
+          padding: 10px;
+        }
+      }
+  
+     
+  }
   }
   
   

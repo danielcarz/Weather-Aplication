@@ -11,7 +11,7 @@ import '../Sass/Components/WrappersComponents/ParentPredictionWeatherState.scss'
 
 export const ParentPredictionWeatherState = ( ) => { 
  
-    const { nextDaysArray, maidNightStatus,     imageStateWeatherArray } = useContext ( Contex );
+    const { nextDaysArray, maidNightStatus, imageStateWeatherPredictionsArray } = useContext ( Contex );
    console.log( maidNightStatus )
  
     return (
@@ -22,14 +22,21 @@ export const ParentPredictionWeatherState = ( ) => {
             <div className="wrapper">
  
                { nextDaysArray.map( ( day, index )  => 
-               
+                
                 <CardPrediction key={ index }  > 
 
                      { day } 
 
                      { maidNightStatus[index] && ( <> Prediction:  {  maidNightStatus[index]  } </> )}
 
-                     { <img src= { imageStateWeatherArray[ index ]  } />}  
+                     { 
+                        
+                        <figure className="imageStatePredictionWeather" >
+
+                            <img src= { imageStateWeatherPredictionsArray[ index ]  } />
+
+                        </figure>
+                     }  
 
                 </CardPrediction> ) }
 
