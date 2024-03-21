@@ -9,50 +9,78 @@
 
 @mixin styles_phone () {
 
-   
-    
-  }
-  
-  @mixin styles_tablets () {
-     
-    width: 100%;
-    height: 150px;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px;
+ 
+  .gifWrapper{
+
+    width: 50%; 
+    height: 100px;
 
     display: flex;
-    flex-direction: column;
-
-   
-
-  }
-  
-  @mixin styles_desktop () {
-
-    width: 100%;
-    height: 150px;
-
-    display: flex;
-    flex-direction: column;
-
+    flex-direction: column; 
+    justify-content: center;
+    
     
 
+      img{
+  
+        width: 80%;
+        height: 60px;
+
+        margin: 0 auto;
+
+      }
+
   }
-  
-  
-  
-  
-  .uvIndexWrapper{
     
+}
   
-    @include media-query($media_phone){
-      @include styles_phone();
-    }
+@mixin styles_tablets () {
+    
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+
   
-    @include media-query($media_tablet){
-      @include styles_tablets();
-    }
+
+}
   
-    @include media-query($media_desktop){
-      @include styles_desktop();
-    }
+@mixin styles_desktop () { 
+
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+
   
+
+}
+  
+  
+  
+  
+.uvIndexWrapper{
+  
+
+  @include media-query($media_phone){
+    @include styles_phone();
   }
+
+  @include media-query($media_tablet){
+    @include styles_tablets();
+  }
+
+  @include media-query($media_desktop){
+    @include styles_desktop();
+  }
+
+}

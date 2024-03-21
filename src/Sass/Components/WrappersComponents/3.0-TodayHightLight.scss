@@ -9,9 +9,34 @@
 
 @mixin styles_phone () {
 
-   
-    
+
+  width: 100%;
+  height:auto;
+
+  padding: 10px;
+
+  border-radius: 15px;
+
+  .TodayHighTittle{
+
+      font-size: 20px; /* Tamaño de fuente más grande para tablets */
   }
+
+  .todayHighLightWrapper{
+      width: 100%;
+      height: 90%;
+      display: flex;
+      flex-direction: column; /* Alinear elementos en filas en tablets */
+
+      .todayHighLight{
+          width: 100%; /* Cada tarjeta ocupa aproximadamente un tercio del ancho en tablets */
+          height: 50%;
+          display: flex;
+      } 
+  }
+
+
+}
   
   @mixin styles_tablets () {
      
@@ -39,9 +64,6 @@
         } 
     }
 
-   
-
-   
 
   }
   

@@ -10,130 +10,179 @@
 @mixin styles_phone () {
 
    
-    
-  }
-  
-  @mixin styles_tablets () {
-     
-    
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 
-    .sunriseTittle{
-        font-size: 14px; /* Tamaño de fuente más grande para tablets */
-        padding: 5px;
-    }
-
-    .gifWrapper{
-
-        width: 100%;
-        height: auto;
-
-        margin: 0; 
-        display: flex;
-        justify-content: center;
-
-        img{
-
-            width: 20%;
-            height: 50px; 
-        }
-    }
-
-    .sunriseDescriptions{
-
-        margin-top: 5px;
-        height: auto;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-       
-        font-size: 10px; /* Ajustar tamaño de fuente para tablets */
-        padding: 2px; /* Añadir un poco de espacio alrededor del texto */
-
-        p{
-
-          padding: 0;
-          margin: 0;
-
-        }
-
-    }
-
-   
-
-  }
-  
-  @mixin styles_desktop () {
-
-   
-    
-    width: 100%;
-    height: 150px;
-
-    display: flex;
-    flex-direction: column;
-
-    .sunriseTittle{
-
-      font-size: 15px;
-
+  .sunriseTittle{
+      font-size: 14px; /* Tamaño de fuente más grande para tablets */
       padding: 5px;
-    }
+  }
 
-    
-    .gifWrapper{
+  .gifWrapper{
 
       width: 100%;
-      height: 100px;
+      height: auto;
 
+      margin: 0; 
       display: flex;
       justify-content: center;
 
+      img{
+
+        width: 80%;
+        height: 60px;
+
+        margin: 0 auto;
+      }
+  }
+
+  .sunriseDescriptions{
+
+      margin-top: 5px;
+      height: auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+     
+      font-size: 10px; /* Ajustar tamaño de fuente para tablets */
+      padding: 2px; /* Añadir un poco de espacio alrededor del texto */
+
+      p{
+
+        padding: 0;
+        margin: 0;
+
+      }
+
+  }
+   
+    
+}
+  
+@mixin styles_tablets () {
+    
+  
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .sunriseTittle{
+      font-size: 14px; /* Tamaño de fuente más grande para tablets */
+      padding: 5px;
+  }
+
+  .gifWrapper{
+
+      width: 100%;
+      height: auto;
+
+      margin: 0; 
+      display: flex;
+      justify-content: center;
 
       img{
 
-        width: 20%;
-        height: 50px;
+          width: 20%;
+          height: 50px; 
+      }
+  }
 
+  .sunriseDescriptions{
+
+      margin-top: 5px;
+      height: auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      
+      font-size: 10px; /* Ajustar tamaño de fuente para tablets */
+      padding: 2px; /* Añadir un poco de espacio alrededor del texto */
+
+      p{
+
+        padding: 0;
+        margin: 0;
 
       }
-    
-
-    }
-
-    .sunriseDescriptions{
-      
-
-      display: flex;
-
-      font-size: 13px;
-
-  
-
-    }
 
   }
+
+  
+
+}
+  
+@mixin styles_desktop () {
+
   
   
-  
-  
-  .sunriseWrapper{
-    
-  
-    @include media-query($media_phone){
-      @include styles_phone();
-    }
-  
-    @include media-query($media_tablet){
-      @include styles_tablets();
-    }
-  
-    @include media-query($media_desktop){
-      @include styles_desktop();
-    }
-  
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+
+  .sunriseTittle{
+
+    font-size: 15px;
+
+    padding: 5px;
   }
+
+  
+  .gifWrapper{
+
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+
+
+    img{
+
+      width: 20%;
+      height: 50px;
+
+
+    }
+  
+
+  }
+
+  .sunriseDescriptions{
+    
+
+    display: flex;
+
+    font-size: 13px;
+
+
+
+  }
+
+}
+  
+  
+  
+  
+.sunriseWrapper{
+  
+
+  @include media-query($media_phone){
+    @include styles_phone();
+  }
+
+  @include media-query($media_tablet){
+    @include styles_tablets();
+  }
+
+  @include media-query($media_desktop){
+    @include styles_desktop();
+  }
+
+}

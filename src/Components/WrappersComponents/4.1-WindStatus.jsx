@@ -28,7 +28,7 @@ export const WindStatus = ( { speedWint, currentDate,  windImage } ) => {
                 <p> { currentDate } </p> */}
             </div>
 
-       </div>
+       </div> 
     );  
 
     

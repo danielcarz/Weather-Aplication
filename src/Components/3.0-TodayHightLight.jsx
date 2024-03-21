@@ -11,7 +11,7 @@ export const TodayHightLight = () => {
 
     return (
 
-        <div className="todayHighLightContainer" >  
+        <div className="todayHighLightContainer" > 
             
             <h3 className="TodayHighTittle" > Today's HighLight </h3>
 

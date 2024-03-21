@@ -9,12 +9,7 @@ import '../../Sass/Components/WrappersComponents/5.1-UvIndex.scss';
 
 export const UvIndex = ( { uvIndexImage } ) => {
 
-    
-    
-
-   
- 
-     
+  
     return (
         <div className="windStatusWrapper" > 
 

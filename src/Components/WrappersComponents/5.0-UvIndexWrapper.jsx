@@ -17,7 +17,7 @@ export const UvIndexWrapper = () => {
 
     console.log( weatherInformation )
 
-
+ 
     return (
               
        <div className="uvIndexContainer">

@@ -7,9 +7,6 @@ import { Contex } from './Hooks/Contex/CreateContext.jsx';
 import { FormCountry, CurrentWeather } from './WrappersComponents/index.js';
 
  
-//styles
-
- 
 export const WeatherCard = () => {
 
     //midnightTemperatures:

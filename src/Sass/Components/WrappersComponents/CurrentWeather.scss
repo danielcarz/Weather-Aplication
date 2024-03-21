@@ -9,55 +9,121 @@
 
 @mixin styles_phone () {
 
-    width: 100%;
-    height: 50vh;
+  width: 100%; 
+  height: 30vh;     
+  
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+
     
-    padding: 20px;
+  border: none;
+  border-radius: 15px;
+
+
+  top: 0;
+  left: 0;
+ 
+  background-image: linear-gradient(to bottom right, #333, #23476b, #666666, #999999);
+
+
+  
+  .currentWeatherImage{
+
+    width: 100%; 
+    height: 100px;
+
+    
+    text-align: center;
+
+
+    .imageWeather{
+
+      width: 50%;    
+      height: 100px;
       
-    color: rgb(232, 248, 3);
-    border: 1px solid rgb(5, 9, 245);
+      
+      
+    }
 
-    border: 1px solid red;
+  }
 
-    .currentWeatherImage{
-
-      width: 40%;
-
-      margin: auto;
+  .currentWeatherInfo{
+    
+    width: 100%; 
 
 
-      border: 1px solid blue; 
+    display: flex;
+    justify-content: space-around;
 
-      img{
-        width: 100px; 
-        height: 100%;
+    font-size: 16px;
+
+
+    .weatherCondition{ 
+
+    
+
+    };
+
+    .temperature{
+      
+     
+    }
+
+  } 
+
+  .currentWeatherDateInfo{
+    
+    width: 100%;
+    height: 50px;
+    
+ 
+
+    h6{
+
+      b{
+
+        font-size: 15px; 
+
       }
+
 
     }
 
-    .currentWeatherInfo{
-      text-align: center;
+    .currentWeatherTitle{
+      font-size: 15px;
+    }
+    
+  }
 
-      color: black;
 
+  .currentWeatherfeatures{
+
+    width: 50%;
+
+    display: flex;
+
+    font-size: 18px; 
+    text-align: center;
+    
+
+    position: relative;
+    right: 5%;
+    top: 30%;
+    
+    
+    border: 1px solid rgb(250, 246, 8);
+
+    .pop{ 
+      width: 50%;
+      
     }
 
-
-    .currentWeatherfeatures{
-      display: flex;
-      
-      
-      border: 1px solid rgb(250, 246, 8);
-
-      .pop{
-        width: 50%;
-      }
-
-      .wind{
-        width: 50%;
-      }
-
+    .wind{
+      width: 50%;
     }
+
+  }
     
   }
   
@@ -152,8 +218,6 @@
     }
 
 
-   
-
     .currentWeatherfeatures{
 
       width: 50%;
@@ -181,8 +245,11 @@
       }
 
     }
+
+
   } 
   
+
   @mixin styles_desktop () {
     
     width: 100%; 

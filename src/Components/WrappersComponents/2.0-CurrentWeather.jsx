@@ -45,9 +45,8 @@ export const CurrentWeather = () => {
                 
             </div> 
 
-
-        
         </section>
+        
 ); 
 
     
