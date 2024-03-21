@@ -27,12 +27,11 @@ export const FeelsLike = ( { feelsLike, celciusIcon } ) => {
                </figure>
 
 
-               <p className="dewPoint" > humidity is making it feel ...</p>
+              {/*  <p className="dewPoint" > humidity is making it feel ...</p> */}
             
             
             </div> 
-
-            
+       
            
        </div>
     );  

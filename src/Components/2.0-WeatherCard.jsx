@@ -8,14 +8,14 @@ import { FormCountry, CurrentWeather } from './WrappersComponents/index.js';
 
  
 //styles
-//import '.'
+
  
 export const WeatherCard = () => {
 
     //midnightTemperatures:
     const { nextDays,  midnight_celcius, maidNightStatus, maidnight_images } = useContext( Contex );
     
-    const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnight_celcius ] );
+    //const [ predictionsWeather, setPredictionsWeather ] = useState( [ nextDays, midnight_celcius ] );
     const [ weatherInfo, setWeatherInfo ] = useState( [ ] )
     
     useEffect(() => {

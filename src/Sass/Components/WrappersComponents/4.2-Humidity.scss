@@ -16,11 +16,61 @@
   @mixin styles_tablets () {
      
    
-    width: 100%;
-    height: 70px;
+    width: 90%;
+    height: 85px;
 
-    border: 1px solid yellow;
-    border-radius: 15px;
+    padding: 5px;
+    
+    margin-top: 20px;
+
+    border-top: 1px solid gray;
+    
+
+    .humidity{
+
+      font-size: 15px;
+    }
+    
+    .humidityAndDewPoint{
+
+      display: flex;
+      justify-content: space-between;
+
+      .feelsLikeWrapper{
+
+        width: 100px;
+        height: 50px;
+
+        display: flex;
+        justify-content: space-around;
+
+        
+
+        img{
+
+          width: 50px;
+          height: 40px; 
+
+        }
+
+        .feelslike{
+
+          margin-right: 20px;
+          margin-top: 10px; 
+        }
+
+      }
+      
+  
+      .dewPoint{
+  
+        font-size: 15px;
+      }
+
+
+
+    }
+
 
 
    

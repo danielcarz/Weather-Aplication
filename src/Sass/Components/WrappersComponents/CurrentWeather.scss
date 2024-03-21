@@ -63,17 +63,25 @@
   
   @mixin styles_tablets () {
      
-    width: 20%; 
+    width: 90%; 
     height: 55vh;   
     
     padding: 20px;
     margin-top: 10px;  
 
       
-    border: 1px solid rgb(139, 238, 9);
+    border: none;
     border-radius: 15px;
 
-    background-color: red;
+    //content: "";
+    //position: absolute;
+    top: 0;
+    left: 0;
+   
+    background-image: linear-gradient(to bottom right, #333, #23476b, #666666, #999999);
+
+    
+    //z-index: -1; 
     
     .currentWeatherImage{
 
@@ -81,15 +89,15 @@
       height: 100px;
 
       
-
-      border: 1px solid blue; 
+      text-align: center;
+  
 
       .imageWeather{
 
         width: 50%;    
         height: 100px;
         
-        border: 1px solid blue;
+        
         
       }
 
@@ -98,27 +106,22 @@
     .currentWeatherInfo{
       
       width: 100%; 
-      
-           
 
 
       display: flex;
       justify-content: space-around;
 
+      font-size: 16px;
+
+
+      .weatherCondition{ 
+
       
-
-     
-
-      color: black;
-
-      .weatherCondition{
-
-        font-size: 15px;
 
       };
 
       .temperature{
-        font-size: 15px;
+        
        
       }
 
@@ -129,7 +132,7 @@
       width: 100%;
       height: 50px;
       
-      border: 1px solid rgb(98, 238, 5);
+   
 
       h6{
 
@@ -153,13 +156,13 @@
 
     .currentWeatherfeatures{
 
-      width: 100%;
+      width: 50%;
 
       display: flex;
 
       font-size: 18px; 
       text-align: center;
-      color: black;
+      
 
       position: relative;
       right: 5%;

@@ -17,10 +17,51 @@
      
     
     width: 100%;
-    height: 150px;
-
+    height: auto;
     display: flex;
     flex-direction: column;
+
+    .sunriseTittle{
+        font-size: 14px; /* Tamaño de fuente más grande para tablets */
+        padding: 5px;
+    }
+
+    .gifWrapper{
+
+        width: 100%;
+        height: auto;
+
+        margin: 0; 
+        display: flex;
+        justify-content: center;
+
+        img{
+
+            width: 20%;
+            height: 50px; 
+        }
+    }
+
+    .sunriseDescriptions{
+
+        margin-top: 5px;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+       
+        font-size: 10px; /* Ajustar tamaño de fuente para tablets */
+        padding: 2px; /* Añadir un poco de espacio alrededor del texto */
+
+        p{
+
+          padding: 0;
+          margin: 0;
+
+        }
+
+    }
 
    
 

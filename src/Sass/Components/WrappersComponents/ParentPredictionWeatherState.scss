@@ -29,15 +29,55 @@
 
     display: flex;
     flex-direction: column;
+
+    height: 30vh;
+    padding: 5px;
+
+    margin-top: 10px;
+
  
+    
+    border: none;
+    border-radius: 15px;
+ 
+    .predictionTittle{
+
+     font-size: 15px;
+    }
+
     .wrapper{
+
+      width: 100%;
+      height: 110px;
+
+      display: flex;
+      justify-content: space-around;
      
-     width: 100%;
+      font-size: 13px;
  
-     display: flex;
- 
-     border: 1px solid red;
- 
+     
+     
+
+      .imageStatePredictionWeather{
+
+       
+
+        width: 100px; 
+        height: 60px;
+
+        
+
+        img{
+          width: 70px;
+          height: 60px;
+
+          padding: 10px;
+        }
+
+        
+      }
+  
+     
     }
    
   }
@@ -72,19 +112,17 @@
      
       font-size: 15px;
 
-     
-     
 
       .imageStatePredictionWeather{
-
-       
+ 
 
         width: 100px; 
         height: 60px;
 
-        
+
 
         img{
+
           width: 70px;
           height: 60px;
 
@@ -95,7 +133,8 @@
       }
   
      
-  }
+    }
+
   }
   
   

@@ -14,11 +14,24 @@
   }
   
   @mixin styles_tablets () {
+   
+
     width: 100%;
-    height: auto;
+    height: 110vh;
     
-    color: blue;
-    border: 1px solid blue;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+ 
+    
+    background-color: black;
+
+    .wrapperOne{
+ 
+      display: flex;
+
+    }
   }
   
   @mixin styles_desktop () {
