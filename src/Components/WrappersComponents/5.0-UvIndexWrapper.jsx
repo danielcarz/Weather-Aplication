@@ -11,12 +11,12 @@ import { Visibility } from "./5.2-Visibility";
 //styles
 import '../../Sass/Components/WrappersComponents/5.0-UvIndexWrapper.scss';
 
-export const UvIndexWrapper = () => {
+export const UvIndexWrapper = () => { 
 
     const  { uvIndexGif, weatherInformation} = useContext( Contex );
 
     console.log( weatherInformation )
-
+ 
  
     return (
               

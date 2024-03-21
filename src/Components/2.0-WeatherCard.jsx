@@ -32,7 +32,7 @@ export const WeatherCard = () => {
 
 
  
-     
+      
    return ( 
         <div className="currentWrapperContainer">
 

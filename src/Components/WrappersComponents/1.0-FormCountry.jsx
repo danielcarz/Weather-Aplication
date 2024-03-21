@@ -7,7 +7,7 @@ import { Contex } from '../Hooks/Contex/CreateContext';
 //styles
 import '../../Sass/Components/WrappersComponents/Form.scss';
 
-export const FormCountry = () => {
+export const FormCountry = () => { 
  
     
     const { inputValue, handleInputChange, handleSubmit } = useContext( Contex );

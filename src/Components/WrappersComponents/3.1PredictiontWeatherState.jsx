@@ -23,7 +23,7 @@ export const PredictionWeatherState = ( { valueDay, valueTemperature, weatherSta
  
                     <p>State weather: { weatherStatus } </p>
                     
-                
+                 
 
                 </div>
 
