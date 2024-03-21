@@ -58,6 +58,9 @@
       div{
 
         padding: 10px;
+
+        display: flex;
+        flex-direction: column;
  
         .imageStatePredictionWeather{
   
@@ -118,25 +121,35 @@
      
       font-size: 15px;
 
+      div{
 
-      .imageStatePredictionWeather{
- 
-
-        width: 100px; 
-        height: 60px;
-
-
-
-        img{
-
-          width: 70px;
-          height: 60px;
-
-          padding: 10px;
-        }
+        padding: 10px;
+        display: flex;
+        
 
         
+
+        .imageStatePredictionWeather{
+   
+  
+          width: 100px; 
+          height: 60px;
+  
+  
+  
+          img{
+  
+            width: 70px;
+            height: 60px;
+  
+            padding: 10px;
+          }
+  
+          
+        } 
+
       }
+
   
      
     }
