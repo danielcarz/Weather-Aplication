@@ -45,11 +45,11 @@
       height: auto;
 
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 3fr);
       gap: 5px;
      
-      font-size: 15px; /* Ajustar tamaño de fuente para tablets */
-      padding: 12px; /* Añadir un poco de espacio alrededor del texto */
+      font-size: 15px; 
+      
 
       p{
 
