@@ -18,23 +18,24 @@
   .sunriseTittle{
       font-size: 14px; /* Tamaño de fuente más grande para tablets */
       padding: 5px;
+      text-align: center;
   }
 
   .gifWrapper{
 
       width: 100%;
-      height: auto;
+      height: 100px;
 
-      margin: 0; 
+      margin: 0 auto; 
       display: flex;
       justify-content: center;
 
       img{
-
-        width: 80%;
+ 
+        width: 40%;
         height: 60px;
 
-        margin: 0 auto;
+        
       }
   }
 

@@ -23,7 +23,7 @@ export const Humidity = ( { humidity } ) => {
               {/*   <p className="dewPoint" > The dew point is ... right now </p> */}
             
             
-            </div> 
+        </div> 
 
             
            

@@ -9,153 +9,163 @@
 
 @mixin styles_phone () {
 
-   
+  /* transform: translateY(120px);  */
+
+  .humidity{
+
+  font-size: 15px;
+
+  
+
+  
+
+  }
     
   }
   
-  @mixin styles_tablets () {
-     
-   
-    width: 90%;
-    height: 85px;
-
-    padding: 5px;
+@mixin styles_tablets () {
     
-    margin-top: 20px;
+  
+  width: 90%;
+  height: 85px;
 
-    border-top: 1px solid gray;
+  padding: 5px;
+  
+  margin-top: 20px;
+
+  border-top: 1px solid gray;
+  
+
+  .humidity{
+
+    font-size: 15px;
+  }
+  
+  .humidityAndDewPoint{
+
+    display: flex;
+    justify-content: space-between;
+
+    .feelsLikeWrapper{
+
+      width: 100px;
+      height: 50px;
+
+      display: flex;
+      justify-content: space-around;
+
+      
+
+      img{
+
+        width: 50px;
+        height: 40px; 
+
+      }
+
+      .feelslike{
+
+        margin-right: 20px;
+        margin-top: 10px; 
+      }
+
+    }
     
 
-    .humidity{
+    .dewPoint{
 
       font-size: 15px;
     }
-    
-    .humidityAndDewPoint{
-
-      display: flex;
-      justify-content: space-between;
-
-      .feelsLikeWrapper{
-
-        width: 100px;
-        height: 50px;
-
-        display: flex;
-        justify-content: space-around;
-
-        
-
-        img{
-
-          width: 50px;
-          height: 40px; 
-
-        }
-
-        .feelslike{
-
-          margin-right: 20px;
-          margin-top: 10px; 
-        }
-
-      }
-      
-  
-      .dewPoint{
-  
-        font-size: 15px;
-      }
 
 
-
-    }
-
-
-
-   
 
   }
+
+
+
   
-  @mixin styles_desktop () {
 
-    width: 90%;
-    height: 85px;
+}
+  
+@mixin styles_desktop () {
 
-    padding: 5px;
+  width: 90%;
+  height: 85px;
+
+  padding: 5px;
+  
+  margin-top: 20px;
+
+  border-top: 1px solid gray;
+  
+
+  .humidity{
+
+    font-size: 15px;
+  }
+  
+  .humidityAndDewPoint{
+
+    display: flex;
+    justify-content: space-between;
+
+    .feelsLikeWrapper{
+
+      width: 100px;
+      height: 50px;
+
+      display: flex;
+      justify-content: space-around;
+
+      
+
+      img{
+
+        width: 50px;
+        height: 40px; 
+
+      }
+
+      .feelslike{
+
+        margin-right: 20px;
+        margin-top: 10px; 
+      }
+
+    }
     
-    margin-top: 20px;
 
-    border-top: 1px solid gray;
-    
-
-    .humidity{
+    .dewPoint{
 
       font-size: 15px;
     }
-    
-    .humidityAndDewPoint{
-
-      display: flex;
-      justify-content: space-between;
-
-      .feelsLikeWrapper{
-
-        width: 100px;
-        height: 50px;
-
-        display: flex;
-        justify-content: space-around;
-
-        
-
-        img{
-
-          width: 50px;
-          height: 40px; 
-
-        }
-
-        .feelslike{
-
-          margin-right: 20px;
-          margin-top: 10px; 
-        }
-
-      }
-      
-  
-      .dewPoint{
-  
-        font-size: 15px;
-      }
 
 
-
-    }
-
-    
-    
 
   }
+
+  
+  
+
+}
+
   
   
   
+.humidityWrapper{
   
-  .humidityWrapper{
-    
-    
   
-    @include media-query($media_phone){
-      @include styles_phone();
-    }
-  
-    @include media-query($media_tablet){
-      @include styles_tablets();
-    }
-  
-    @include media-query($media_desktop){
-      @include styles_desktop();
-    }
-  
+
+  @include media-query($media_phone){
+    @include styles_phone();
   }
+
+  @include media-query($media_tablet){
+    @include styles_tablets();
+  }
+
+  @include media-query($media_desktop){
+    @include styles_desktop();
+  }
+
+}
